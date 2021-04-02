@@ -1,4 +1,4 @@
-o# Welcome to Jekyll!
+# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -7,7 +7,7 @@ o# Welcome to Jekyll!
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Lelio Campanile / Academic site"
+title                    : "Lelio Campanile"
 title_separator          : "-"
 name                     : &name "Lelio Campanile"
 description              : &description "personal description"
@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : @lelioc
 facebook:
   username               :
   app_id                 :
