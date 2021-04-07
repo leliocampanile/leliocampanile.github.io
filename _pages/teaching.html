@@ -7,6 +7,24 @@ author_profile: true
 
 {% include base_path %}
 
+<h2> ACADEMIC TUTORING AND TEACHING </h2>
+
+
+
+
+
 {% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+  {% if post.type == 'Academic Teaching' %}
+    {% include archive-single.html %}
+  {% endif %}
 {% endfor %}
+
+<h2> TEACHING AND TRAINING POSITIONS </h2>
+
+{% for post in site.teaching reversed %}
+{% if post.type == 'Professional Training Course' %}
+  {% include archive-single.html %}
+{% endif %}
+{% endfor %}
+
+
