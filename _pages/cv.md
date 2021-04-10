@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+### [Download full cv updated to 2021-11-16]({{ site.url }}/files/2020-11-16-full-cv.pdf)
+
 Work experience
 ======
 * [ 2007 – Current ] Full time employee at University - Università degli Studi della Campania “Luigi Vanvitelli” -  Caserta Italy : IT technical employee
