@@ -7,7 +7,7 @@
 
 # Site Settings
 minimal_mistakes_skin    : "air"
-locale                   : "it-IT"
+locale                   : "en-EN"
 title                    : "Lelio Campanile"
 title_separator          : "-"
 name                     : &name "Lelio Campanile"
