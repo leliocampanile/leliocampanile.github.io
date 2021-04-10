@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 header:
-  overlay_image: /assets/images/lelio_apple.jpeg
+  overlay_image: lelio_apple.jpeg
 ---
 
 
