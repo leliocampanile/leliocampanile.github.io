@@ -7,7 +7,7 @@
 
 # Site Settings
 minimal_mistakes_skin    : "air"
-locale                   : "en-US"
+locale                   : "it-IT"
 title                    : "Lelio Campanile"
 title_separator          : "-"
 name                     : &name "Lelio Campanile"
@@ -109,7 +109,7 @@ author:
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
-  tumblr           : "http://leliocampanile.tumblr.com/"
+  tumblr           : "leliocampanile"
   twitter          : "lelioc"
   vine             :
   weibo            :
@@ -257,7 +257,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Rome # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

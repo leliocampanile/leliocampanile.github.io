@@ -6,6 +6,8 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+header:
+  overlay_image: /assets/images/lelio_apple.jpeg
 ---
 
 

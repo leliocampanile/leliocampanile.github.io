@@ -64,18 +64,20 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
+
+# Academic Tutoring And Teaching 
+
+{% for post in site.teaching  %}
+  {% if post.type == 'Academic Teaching' %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+  {% endif %}
+{% endfor %}
+
+# Teaching Training Position 
+
+{% for post in site.teaching  %}
+{% if post.type == 'Professional Training Course' %}
+  {% include archive-single-cv.html %}
+{% endif %}
+{% endfor %}
+
