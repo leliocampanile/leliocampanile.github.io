@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-### [Download full cv updated to 2021-11-16]({{ site.url }}/files/2020-11-16-full-cv.pdf)
+### [Download full cv updated to 2020-11-16]({{ site.url }}/files/2020-11-16-full-cv.pdf)
 
 Work experience
 ======
