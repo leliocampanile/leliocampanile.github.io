@@ -24,10 +24,12 @@ import html
 import os
 import re
 
+from pprint import pprint, pformat
+
 #todo: incorporate different collection types rather than a catch all publications, requires other changes to template
 publist = {
     "journal":{
-        "file": "scopus.bib",
+        "file": "scopus_full.bib",
         "venuekey" : "journal",
         "venue-pretext" : "",
         "collection" : {"name":"publications",
@@ -58,7 +60,7 @@ for pubsource in publist:
         pub_day = "01"
         
         b = bibdata.entries[bib_id].fields
-        
+        entry = bibdata.entries[bib_id]
         try:
             pub_year = f'{b["year"]}'
 
@@ -91,7 +93,9 @@ for pubsource in publist:
             citation = ""
 
             #citation authors - todo - add highlighting for primary author?
+            authors = ""
             for author in bibdata.entries[bib_id].persons["author"]:
+                authors = authors+" "+author.first_names[0]+", "+author.last_names[0]+" and "
                 citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
 
             #citation title
@@ -110,6 +114,18 @@ for pubsource in publist:
             md += """collection: """ +  publist[pubsource]["collection"]["name"]
 
             md += """\npermalink: """ + publist[pubsource]["collection"]["permalink"]  + html_filename
+            
+            doi = False
+            doi_text = ""
+            if "doi" in b.keys():
+                doi_text = html_escape(b['doi'])
+                doi = True 
+                
+            issn = False
+            issn_text = ""
+            if "isbn" in b.keys():
+                issn_text = html_escape(b['isbn'])
+                issn = True
             
             note = False
             if "note" in b.keys():
@@ -131,7 +147,15 @@ for pubsource in publist:
 
             md += "\n---"
 
+            # Added by Lelio Campanile
+            abstract = False
+            if "abstract" in b.keys():
+                abstract = True
             
+            author_keywords = False
+            if "author_keywords" in b.keys():
+                author_keywords = True
+                            
             ## Markdown description for individual page
             if note:
                 md += "\n" + html_escape(b["note"]) + "\n"
@@ -141,10 +165,70 @@ for pubsource in publist:
             else:
                 md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
 
-            md_filename = os.path.basename(md_filename)
+            if abstract:
+                md+="\n __Abstract:__ " + html_escape(b["abstract"]) + "\n"
+                
+            if author_keywords:
+                md += "\n __Author Keywords:__ " + html_escape(b["author_keywords"]) + "\n"
+            
+            try:
+                del entry.fields['abstract']
+            except KeyError as e:
+                print("key not found in entry", e)
+                
+            try:
+                del entry.fields['author_keywords']
+            except KeyError as e:
+                print("key not found in entry", e)
+                
+            try:
+                del entry.fields['keywords']
+            except KeyError as e:
+                print("key not found in entry", e)
+                
+            try:
+                del entry.fields['note']
+            except KeyError as e:
+                print("key not found in entry", e)
+            
+            try:
+                del entry.fields['source']
+            except KeyError as e:
+                print("key not found in entry", e)
+                
+            try:
+                del entry.fields['publication_stage']
+            except KeyError as e:
+                print("key not found in entry", e)
+                     
+            try:
+                del entry.fields['url']
+            except KeyError as e:
+                print("key not found in entry", e)     
 
+            try:
+                del entry.fields['source']
+            except KeyError as e:
+                print("key not found in entry", e) 
+            
+            bibtext_citation = ""       
+            bibtex_citation = entry.to_string('bibtex')
+            
+            md += "\n __Bibtex citation:__ \n```bibtex \n" + bibtex_citation + "\n``` \n"
+            
+            with open("../files/bibfiles/"+bib_id+".bib", 'w') as bibfile:
+                bibfile.write(bibtex_citation)
+            
+            
+            md += "[Download .bib file]({{ site.url }}/files/bibfiles/"+bib_id+".bib) \n"
+                
+            md_filename = os.path.basename(md_filename)
+            
+            
+            
             with open("../_publications/" + md_filename, 'w') as f:
                 f.write(md)
+            
             print(f'SUCESSFULLY PARSED {bib_id}: \"', b["title"][:60],"..."*(len(b['title'])>60),"\"")
         # field may not exist for a reference
         except KeyError as e:

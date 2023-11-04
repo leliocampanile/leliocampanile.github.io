@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 title: "Projects"
 permalink: /projects/
 author_profile: true
@@ -9,9 +9,7 @@ author_profile: true
 
 ## Reasearch related projects
 
-* [ 2020 ] Università degli Studi della Campania "L. Vanvitelli" - Programma V:ALERE 2020
-
-__WAIILD TROLS:__ Web Artificial Intelligence for Information Literacy Dissemination – TRuth Or Lies Sources?
+* [ 2020 ] Università degli Studi della Campania "L. Vanvitelli" - Programma V:ALERE 2020 - __WAIILD TROLS:__ Web Artificial Intelligence for Information Literacy Dissemination – TRuth Or Lies Sources?
 
 ## Professional related projects
 
