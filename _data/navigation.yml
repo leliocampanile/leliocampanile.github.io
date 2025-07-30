@@ -2,12 +2,12 @@
 main:
   - title: "Publications"
     url: /publications/
+    
+  - title: "Thesis"
+    url: /thesis/
   
   - title: "Projects"
     url: /projects/
-  
-  - title: "Committees"
-    url: /committees/ 
   
   - title: "Teaching"
     url: /teaching/    
