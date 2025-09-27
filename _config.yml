@@ -267,6 +267,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-scholar
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -275,6 +276,17 @@ whitelist:
   - jekyll-feed
   - jemoji
 
+# jekyll-scholar plugin configuration
+scholar:
+  source: _bibliography
+  bibliography: papers.bib
+  style: ieee      # puoi sostituire con un tuo .csl in /_bibliography/
+  locale: en
+  sort_by: year
+  order: descending
+
+  # usa un template custom per ogni voce (lo creiamo sotto)
+  bibliography_template: bibliography_item
 
 # Archives
 #  Type
