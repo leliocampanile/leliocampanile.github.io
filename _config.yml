@@ -285,7 +285,7 @@ scholar:
   sort_by: year
   order: descending
   details_dir: bibliography         # cartella dove generare le pagine (URL: /bibliography/<key>.html)
-  details_layout: pub               # layout usato per ogni pagina di dettaglio
+  details_layout: pub.html               # layout usato per ogni pagina di dettaglio
   details_link: "Details"           
   repository: assets/papers
   # usa un template custom per ogni voce (lo creiamo sotto)
