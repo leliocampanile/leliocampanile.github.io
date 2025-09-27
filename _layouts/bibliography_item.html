@@ -1,4 +1,12 @@
+{%- comment -%} URL robusto alla pagina details (rispetta details_permalink/permalink globali) {%- endcomment -%}
+{%- capture detail_url -%}{% details_link entry.key %}{%- endcapture -%}
+
 <div class="pub-item">
+  <!-- Titolo linkato alla pagina di dettaglio -->
+  <div class="pub-title">
+    <a href="{{ detail_url }}">{{ entry.title }}</a>
+  </div>
+
   <!-- Citazione completa formattata da CSL -->
   <div class="citation">{{ reference }}</div>
 
@@ -12,7 +20,7 @@
   </details>
   {% endif %}
 
-  <!-- Azioni: DOI/URL + Copy/Download BibTeX -->
+  <!-- Azioni: DOI/URL + Details + Copy/Download BibTeX -->
   <div class="pub-actions">
     {% if entry.doi %}
       <a class="btn btn-pub" href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener">DOI</a>
@@ -21,12 +29,15 @@
       <a class="btn btn-pub" href="{{ entry.url }}" target="_blank" rel="noopener">Publisher</a>
     {% endif %}
 
+    <!-- Link esplicito ai details -->
+    <a class="btn btn-pub" href="{{ detail_url }}">Details</a>
+
     <button class="btn btn-pub copy-bib" data-key="{{ entry.key }}">Copy BibTeX</button>
     <button class="btn btn-pub download-bib" data-key="{{ entry.key }}">Download .bib</button>
 
     <!-- BibTeX grezzo nascosto (per copy/download) -->
     <pre id="bib-{{ entry.key }}" class="bibtex" style="display:none">
-{{ entry.bibtex }}
+{{ entry | bibtex }}
     </pre>
   </div>
 </div>

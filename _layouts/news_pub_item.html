@@ -1,50 +1,51 @@
-{%- comment -%}
-Template compatto per la Home con badge Journal/Conference.
-{%- endcomment -%}
+{%- comment -%} Template compatto per la Home con badge e link robusti {%- endcomment -%}
 
-{%- assign venue = entry.journal | default: entry.booktitle | default: entry.series -%}
-{%- assign detail_path = '/' | append: site.scholar.details_dir | append: '/' | append: entry.key | append: '.html' -%}
-{%- assign detail_url = detail_path | relative_url -%}
+{%- assign e = entry -%}
+{%- assign venue = e.journal | default: e.booktitle | default: e.series | default: e.publisher -%}
+
+{%- comment -%} URL dettagli robusto, indipendente da .html vs /index.html {%- endcomment -%}
+{%- capture detail_url -%}{% details_link e.key %}{%- endcapture -%}
+
+{%- comment -%} Link primario (priorità: DOI → URL editore → details) {%- endcomment -%}
 {%- assign primary_link = nil -%}
-{%- if entry.doi -%}
-  {%- assign primary_link = 'https://doi.org/' | append: entry.doi -%}
-{%- elsif entry.url -%}
-  {%- assign primary_link = entry.url -%}
+{%- if e.doi -%}
+  {%- assign primary_link = 'https://doi.org/' | append: e.doi -%}
+{%- elsif e.url -%}
+  {%- assign primary_link = e.url -%}
+{%- else -%}
+  {%- assign primary_link = detail_url -%}
 {%- endif -%}
 
-{%- comment -%}
-Determina il tipo di pubblicazione:
-- Journal se ha campo journal
-- Conference se ha booktitle
-- Altrimenti Other
-{%- endcomment -%}
-{%- assign pub_type = "Other" -%}
-{%- if entry.journal -%}
-  {%- assign pub_type = "Journal" -%}
-{%- elsif entry.booktitle -%}
-  {%- assign pub_type = "Conference" -%}
+{%- comment -%} Badge: prova dal type, poi fallback journal/booktitle {%- endcomment -%}
+{%- assign raw_kind = e.type | default: '' | downcase | strip -%}
+{%- assign pub_badge = nil -%}
+{%- if raw_kind contains 'article' -%}{% assign pub_badge = 'Journal' %}
+{%- elsif raw_kind contains 'conference' -%}{% assign pub_badge = 'Conference' %}
+{%- elsif raw_kind contains 'book chapter' -%}{% assign pub_badge = 'Book Chapter' %}
 {%- endif -%}
+{%- if pub_badge == nil -%}
+  {%- if e.journal %}{% assign pub_badge = 'Journal' %}
+  {%- elsif e.booktitle %}{% assign pub_badge = 'Conference' %}
+  {%- else %}{% assign pub_badge = 'Other' %}{% endif -%}
+{%- endif -%}
+{%- assign pub_class = pub_badge | downcase | replace: ' ', '-' -%}
 
 <div class="news-pub">
   <div class="news-title">
-    {%- if primary_link -%}
-      <strong><a href="{{ primary_link }}" target="_blank" rel="noopener">{{ entry.title }}</a></strong>
-    {%- else -%}
-      <strong><a href="{{ detail_url }}">{{ entry.title }}</a></strong>
-    {%- endif -%}
+    <strong><a href="{{ primary_link }}" {% if primary_link != detail_url %}target="_blank" rel="noopener"{% endif %}>{{ e.title }}</a></strong>
   </div>
 
   <div class="news-meta">
-    <span class="pub-badge pub-badge-{{ pub_type | downcase }}">{{ pub_type }}</span>
-    {{ entry.author }}
+    <span class="pub-badge pub-badge-{{ pub_class }}">{{ pub_badge }}</span>
+    {{ e.author }}
     {%- if venue %} — <em>{{ venue }}</em>{% endif -%}
-    {%- if entry.year %}, {{ entry.year }}{% endif -%}
+    {%- if e.year %}, {{ e.year }}{% endif -%}
   </div>
 
   <div class="news-actions">
     <a class="btn btn-pub" href="{{ detail_url }}">Details</a>
-    {%- if entry.doi -%}
-      <a class="btn btn-pub" href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener">DOI</a>
+    {%- if e.doi -%}
+      <a class="btn btn-pub" href="https://doi.org/{{ e.doi }}" target="_blank" rel="noopener">DOI</a>
     {%- endif -%}
   </div>
 </div>

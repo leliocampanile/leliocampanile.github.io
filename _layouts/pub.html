@@ -1,17 +1,48 @@
 ---
 layout: single
+title: false
+author_profile: false
+read_time: false
 ---
 
-{%- assign venue = page.entry.journal | default: page.entry.booktitle | default: page.entry.series -%}
-{%- assign pub_type = "Other" -%}
-{%- if page.entry.journal -%}{% assign pub_type = "Journal" %}
-{%- elsif page.entry.booktitle -%}{% assign pub_type = "Conference" %}{%- endif -%}
+{%- assign e = page.entry -%}
+
+{%- comment %} Venue con fallback multipli {% endcomment -%}
+{%- assign venue = e.journal | default: e.booktitle | default: e.series | default: e.publisher -%}
+
+{%- comment %} Normalizza il campo 'type' del .bib, se presente {% endcomment -%}
+{%- assign raw_kind = e.type | default: '' | downcase | strip -%}
+
+{%- assign pub_badge = nil -%}
+{%- if raw_kind != '' -%}
+  {%- if raw_kind contains 'article' -%}
+    {%- assign pub_badge = 'Journal' -%}
+  {%- elsif raw_kind contains 'conference' -%}
+    {%- assign pub_badge = 'Conference paper' -%}
+  {%- elsif raw_kind contains 'book chapter' -%}
+    {%- assign pub_badge = 'Book Chapter' -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment %} Fallback se 'type' non c'è o non ha i valori attesi {% endcomment -%}
+{%- if pub_badge == nil -%}
+  {%- if e.journal and e.journal != '' -%}
+    {%- assign pub_badge = 'Journal' -%}
+  {%- elsif e.booktitle and e.booktitle != '' -%}
+    {%- assign pub_badge = 'Conference paper' -%}
+  {%- else -%}
+    {%- assign pub_badge = 'Other' -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment %} Classe CSS coerente (kebab-case) {% endcomment -%}
+{%- assign pub_class = pub_badge | downcase | replace: ' ', '-' -%}
 
 <article class="pub-detail">
   <header>
     <h1 class="page__title">{{ page.entry.title }}</h1>
     <p class="page__meta">
-      <span class="pub-badge pub-badge-{{ pub_type | downcase }}">{{ pub_type }}</span>
+      <span class="pub-badge pub-badge-{{ pub_class }}">{{ pub_badge }}</span>
       {{ page.entry.author }}
       {%- if page.entry.year %} — {{ page.entry.year }}{% endif -%}
       {%- if venue %} · <em>{{ venue }}</em>{% endif -%}
@@ -22,6 +53,7 @@ layout: single
   <section>
     <h2>Venue & metadata</h2>
     <ul>
+      {%- if page.entry.journal %}<li><strong>Journal/Proceedings:</strong> {{ page.entry.journal }}</li>{% endif -%}
       {%- if page.entry.volume %}<li><strong>Volume:</strong> {{ page.entry.volume }}</li>{% endif -%}
       {%- if page.entry.number %}<li><strong>Number:</strong> {{ page.entry.number }}</li>{% endif -%}
       {%- if page.entry.pages %}<li><strong>Pages:</strong> {{ page.entry.pages }}</li>{% endif -%}
@@ -32,8 +64,7 @@ layout: single
       {%- if page.entry.address %}<li><strong>Location:</strong> {{ page.entry.address }}</li>{% endif -%}
       {%- if page.entry.note %}<li><strong>Note:</strong> {{ page.entry.note }}</li>{% endif -%}
       {%- if page.entry.award %}<li><strong>Award:</strong> 🏅 {{ page.entry.award }}</li>{% endif -%}
-      {%- if page.entry.keywords %}<li><strong>Keywords:</strong> {{ page.entry.keywords }}</li>{% endif -%}
-    </ul>
+      {%- if page.entry.author_keywords %}<li><strong>Author keywords:</strong> {{ page.entry.author_keywords }}</li>{% endif -%}    </ul>
   </section>
 
   <section>
@@ -46,17 +77,18 @@ layout: single
   </section>
  
   {%- comment -%} KEYWORDS (come tag) {%- endcomment -%}
-  {% if page.entry.keywords %}
-  <section>
-    <h2>Keywords</h2>
-    <p>
-      {%- assign kwlist = page.entry.keywords | split: "," -%}
-      {%- for kw in kwlist -%}
-        <span class="pub-tag">{{ kw | strip }}</span>
-      {%- endfor -%}
-    </p>
-  </section>
-  {% endif %}
+{% if page.entry.keywords %}
+<section>
+  <h2>Keywords</h2>
+  <p>
+    {%- assign kwlist = page.entry.keywords | split: "," -%}
+    {%- for kw in kwlist -%}
+      {%- assign kwslug = kw | strip | downcase | replace: " ", "-" -%}
+      <a class="pub-tag" href="{{ '/keyword/' | append: kwslug | relative_url }}">{{ kw | strip }}</a>
+    {%- endfor -%}
+  </p>
+</section>
+{% endif %}
   
   {%- comment -%} A R T I F A C T S  &  L I N K S {%- endcomment -%}
   <section>
@@ -64,10 +96,10 @@ layout: single
     <p>
       {% if page.entry.doi %}<a class="btn btn-pub" href="https://doi.org/{{ page.entry.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
       {% if page.entry.url %}<a class="btn btn-pub" href="{{ page.entry.url }}" target="_blank" rel="noopener">Publisher</a>{% endif %}
-      {% if site.scholar.repository %}
+      <!--{% if site.scholar.repository %}
         {% assign pdf = site.scholar.repository | append: '/' | append: page.entry.key | append: '.pdf' | relative_url %}
         <a class="btn btn-pub" href="{{ pdf }}" target="_blank" rel="noopener">PDF</a>
-      {% endif %}
+      {% endif %} -->
 
       {%- comment -%} campi opzionali nel .bib: code, dataset, slides, video {%- endcomment -%}
       {% if page.entry.code %}<a class="btn btn-pub" href="{{ page.entry.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
@@ -86,7 +118,7 @@ layout: single
 
   <section>
     <h2>Suggested citation</h2>
-    <p>{{ reference }}</p>
+    <p>{% reference page.entry.key %}</p>
   </section>
 
   <p><a href="{{ '/publications/' | relative_url }}">← Back to Publications</a></p>
