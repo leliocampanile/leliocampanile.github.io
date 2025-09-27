@@ -24,3 +24,8 @@ My research is primarily focused on the **modeling of complex computer-based sys
 I investigate the integration of **Machine Learning**, **Deep Learning**, and **eXplainable Artificial Intelligence (XAI)** techniques into modeling and analysis, with particular attention to **non-functional requirements** such as **performance, privacy, and security**.  
 
 I regularly publish peer-reviewed work, including journal articles, conference papers, and book chapters. I also serve as **reviewer, committee member, and session chair** in several international conferences and scientific journals.
+
+
+## News — Latest publications
+
+{% bibliography --max 5 %}
