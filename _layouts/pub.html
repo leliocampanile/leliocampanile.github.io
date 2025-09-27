@@ -10,30 +10,20 @@ read_time: false
 {%- comment %} Venue con fallback multipli {% endcomment -%}
 {%- assign venue = e.journal | default: e.booktitle | default: e.series | default: e.publisher -%}
 
-{%- comment %} Normalizza il campo 'type' del .bib, se presente {% endcomment -%}
+{%- comment -%} Badge: prova dal type, poi fallback journal/booktitle {%- endcomment -%}
 {%- assign raw_kind = e.type | default: '' | downcase | strip -%}
-
 {%- assign pub_badge = nil -%}
-{%- if raw_kind != '' -%}
-  {%- if raw_kind contains 'article' -%}
-    {%- assign pub_badge = 'Journal' -%}
-  {%- elsif raw_kind contains 'conference' -%}
-    {%- assign pub_badge = 'Conference paper' -%}
-  {%- elsif raw_kind contains 'book chapter' -%}
-    {%- assign pub_badge = 'Book Chapter' -%}
-  {%- endif -%}
+{%- if raw_kind contains 'article' -%}{% assign pub_badge = 'Journal' %}
+{%- elsif raw_kind contains 'conference' -%}{% assign pub_badge = 'Conference' %}
+{%- elsif raw_kind contains 'book chapter' -%}{% assign pub_badge = 'Book Chapter' %}
+{%- else %}{% assign pub_badge = 'Other' %}
 {%- endif -%}
-
-{%- comment %} Fallback se 'type' non c'è o non ha i valori attesi {% endcomment -%}
 {%- if pub_badge == nil -%}
-  {%- if e.journal and e.journal != '' -%}
-    {%- assign pub_badge = 'Journal' -%}
-  {%- elsif e.booktitle and e.booktitle != '' -%}
-    {%- assign pub_badge = 'Conference paper' -%}
-  {%- else -%}
-    {%- assign pub_badge = 'Other' -%}
-  {%- endif -%}
+  {%- if e.journal %}{% assign pub_badge = 'Journal' %}
+  {%- elsif e.booktitle %}{% assign pub_badge = 'Conference' %}
+  {%- else %}{% assign pub_badge = 'Other' %}{% endif -%}
 {%- endif -%}
+{%- assign pub_class = pub_badge | downcase | replace: ' ', '-' -%}
 
 {%- comment %} Classe CSS coerente (kebab-case) {% endcomment -%}
 {%- assign pub_class = pub_badge | downcase | replace: ' ', '-' -%}
@@ -83,8 +73,8 @@ read_time: false
   <p>
     {%- assign kwlist = page.entry.keywords | split: "," -%}
     {%- for kw in kwlist -%}
-      {%- assign kwslug = kw | strip | downcase | replace: " ", "-" -%}
-      <a class="pub-tag" href="{{ '/keyword/' | append: kwslug | relative_url }}">{{ kw | strip }}</a>
+        {%- assign kwslug = kw | strip | slugify -%}
+        <a class="pub-tag" href="{{ '/keyword/' | append: kwslug | relative_url }}">{{ kw | strip }}</a>
     {%- endfor -%}
   </p>
 </section>
