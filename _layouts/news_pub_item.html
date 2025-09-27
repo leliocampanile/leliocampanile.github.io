@@ -1,6 +1,5 @@
 {%- comment -%}
-Template compatto per la Home.
-Mostra: Titolo (link) · autori · venue, anno · link Details (pagina generata) · DOI (se c'è)
+Template compatto per la Home con badge Journal/Conference.
 {%- endcomment -%}
 
 {%- assign venue = entry.journal | default: entry.booktitle | default: entry.series -%}
@@ -13,6 +12,19 @@ Mostra: Titolo (link) · autori · venue, anno · link Details (pagina generata)
   {%- assign primary_link = entry.url -%}
 {%- endif -%}
 
+{%- comment -%}
+Determina il tipo di pubblicazione:
+- Journal se ha campo journal
+- Conference se ha booktitle
+- Altrimenti Other
+{%- endcomment -%}
+{%- assign pub_type = "Other" -%}
+{%- if entry.journal -%}
+  {%- assign pub_type = "Journal" -%}
+{%- elsif entry.booktitle -%}
+  {%- assign pub_type = "Conference" -%}
+{%- endif -%}
+
 <div class="news-pub">
   <div class="news-title">
     {%- if primary_link -%}
@@ -23,6 +35,7 @@ Mostra: Titolo (link) · autori · venue, anno · link Details (pagina generata)
   </div>
 
   <div class="news-meta">
+    <span class="pub-badge pub-badge-{{ pub_type | downcase }}">{{ pub_type }}</span>
     {{ entry.author }}
     {%- if venue %} — <em>{{ venue }}</em>{% endif -%}
     {%- if entry.year %}, {{ entry.year }}{% endif -%}
