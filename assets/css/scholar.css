@@ -10,3 +10,25 @@
 .news-meta { font-size: .95rem; color: #555; margin-top: .2rem; }
 .news-actions { margin-top: .35rem; }
 .btn.btn-pub { display: inline-block; margin-right: .5rem; margin-top: .15rem; }
+
+.pub-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 0.15rem 0.4rem;
+  margin-right: 0.5rem;
+  border-radius: 0.35rem;
+}
+
+.pub-badge-journal {
+  background-color: #2a9d8f; /* verde acqua */
+}
+
+.pub-badge-conference {
+  background-color: #e76f51; /* rosso-arancio */
+}
+
+.pub-badge-other {
+  background-color: #6c757d; /* grigio */
+}
