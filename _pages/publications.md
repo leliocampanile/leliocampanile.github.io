@@ -12,7 +12,7 @@ author_profile: true
 {% include base_path %}
 
 
-{% bibliography --group_by year --order descending --template bibliography_item %}
+{% bibliography --group_by year --group_order descending --template bibliography_item %}
 
 <!-- <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
