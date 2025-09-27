@@ -11,6 +11,9 @@ author_profile: true
 
 {% include base_path %}
 
- <ul>{% for post in site.publications reversed %}
+
+{% bibliography --group_by year %}
+
+<!-- <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ul> -->
