@@ -1,0 +1,15 @@
+---
+layout: none
+---
+
+<div style="border:1px dashed #aaa; padding:.5rem; margin:.5rem 0;">
+  <p><strong>Key:</strong> <code>{{ entry.key }}</code></p>
+  <p><strong>Reference:</strong> {{ reference }}</p>
+
+  {%- assign details_dir = site.scholar.details_dir | default: 'bibliography' -%}
+  {%- capture detail_url -%}{{ '/' | append: details_dir | append: '/' | append: entry.key | append: '.html' | relative_url }}{%- endcapture -%}
+
+  <p><strong>Detail URL:</strong> 
+    <a href="{{ detail_url }}">{{ detail_url }}</a>
+  </p>
+</div>
