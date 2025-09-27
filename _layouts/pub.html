@@ -71,7 +71,7 @@ read_time: false
 <section>
   <h2>Keywords</h2>
   <p>
-    {%- assign kwlist = page.entry.keywords | split: "," -%}
+    {%- assign kwlist = page.entry.keywords | split: ";" -%}
     {%- for kw in kwlist -%}
         {%- assign kwslug = kw | strip | slugify -%}
         <a class="pub-tag" href="{{ '/keyword/' | append: kwslug | relative_url }}">{{ kw | strip }}</a>

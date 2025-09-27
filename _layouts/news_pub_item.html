@@ -22,6 +22,7 @@
 {%- if raw_kind contains 'article' -%}{% assign pub_badge = 'Journal' %}
 {%- elsif raw_kind contains 'conference' -%}{% assign pub_badge = 'Conference' %}
 {%- elsif raw_kind contains 'book chapter' -%}{% assign pub_badge = 'Book Chapter' %}
+{%- else %}{% assign pub_badge = 'Other' %}
 {%- endif -%}
 {%- if pub_badge == nil -%}
   {%- if e.journal %}{% assign pub_badge = 'Journal' %}
@@ -32,7 +33,7 @@
 
 <div class="news-pub">
   <div class="news-title">
-    <strong><a href="{{ primary_link }}" {% if primary_link != detail_url %}target="_blank" rel="noopener"{% endif %}>{{ e.title }}</a></strong>
+    <strong><a href="{{ detail_url }}" {% if primary_link != detail_url %}target="_blank" rel="noopener"{% endif %}>{{ e.title }}</a></strong>
   </div>
 
   <div class="news-meta">

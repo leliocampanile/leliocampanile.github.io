@@ -29,6 +29,10 @@
   background-color: #e76f51; /* rosso-arancio */
 }
 
+.pub-badge-book-chapter {
+  background-color: #1931bb; /* blu */
+}
+
 .pub-badge-other {
   background-color: #6c757d; /* grigio */
 }
