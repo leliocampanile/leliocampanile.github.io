@@ -28,4 +28,4 @@ I regularly publish peer-reviewed work, including journal articles, conference p
 
 ## News — Latest publications
 
-{% bibliography --max 5 %}
+{% bibliography --max 5  --template news_pub_item %}
