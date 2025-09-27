@@ -32,3 +32,6 @@
 .pub-badge-other {
   background-color: #6c757d; /* grigio */
 }
+
+.pub-detail ul { margin-left: 1rem; }
+.pub-detail ul li { margin: .15rem 0; }
