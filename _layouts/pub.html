@@ -1,0 +1,48 @@
+---
+layout: single
+---
+
+<article class="pub-detail">
+  <header>
+    <h1 class="page__title">{{ entry.title }}</h1>
+    <p class="page__meta">
+      {{ entry.author }}{% if entry.year %} — {{ entry.year }}{% endif %}
+      {% assign venue = entry.journal | default: entry.booktitle | default: entry.series %}
+      {% if venue %} · <em>{{ venue }}</em>{% endif %}
+    </p>
+  </header>
+
+  <section>
+    <h2>Abstract</h2>
+    {% if entry.abstract %}
+      <p>{{ entry.abstract }}</p>
+    {% else %}
+      <p><em>No abstract available.</em></p>
+    {% endif %}
+  </section>
+
+  <section>
+    <h2>Links</h2>
+    <p>
+      {% if entry.doi %}<a class="btn btn-pub" href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+      {% if entry.url %}<a class="btn btn-pub" href="{{ entry.url }}" target="_blank" rel="noopener">Publisher</a>{% endif %}
+      {% if site.scholar.repository %}
+        {% assign pdf = site.scholar.repository | append: '/' | append: entry.key | append: '.pdf' | relative_url %}
+        <a class="btn btn-pub" href="{{ pdf }}" target="_blank" rel="noopener">PDF</a>
+      {% endif %}
+      <button class="btn btn-pub copy-bib" data-key="{{ entry.key }}">Copy BibTeX</button>
+      <button class="btn btn-pub download-bib" data-key="{{ entry.key }}">Download .bib</button>
+    </p>
+
+    <pre id="bib-{{ entry.key }}" class="bibtex" style="display:none">
+{{ entry | bibtex }}
+    </pre>
+  </section>
+
+  <section>
+    <h2>Suggested citation</h2>
+    <p>{{ reference }}</p>
+  </section>
+
+  <p><a href="{{ '/publications/' | relative_url }}">← Back to Publications</a></p>
+</article>
