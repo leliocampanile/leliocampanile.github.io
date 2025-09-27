@@ -44,7 +44,20 @@ layout: single
       <p><em>No abstract available.</em></p>
     {% endif %}
   </section>
-
+ 
+  {%- comment -%} KEYWORDS (come tag) {%- endcomment -%}
+  {% if entry.keywords %}
+  <section>
+    <h2>Keywords</h2>
+    <p>
+      {%- assign kwlist = entry.keywords | split: "," -%}
+      {%- for kw in kwlist -%}
+        <span class="pub-tag">{{ kw | strip }}</span>
+      {%- endfor -%}
+    </p>
+  </section>
+  {% endif %}
+  
   {%- comment -%} A R T I F A C T S  &  L I N K S {%- endcomment -%}
   <section>
     <h2>Links & artifacts</h2>
