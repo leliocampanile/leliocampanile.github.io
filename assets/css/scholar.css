@@ -3,3 +3,10 @@
 .pub-abstract summary { cursor: pointer; font-weight: 600; }
 .pub-abstract .abstract-body { margin-top: .5rem; }
 .btn.btn-pub { display: inline-block; margin-right: .5rem; margin-top: .5rem; }
+
+.news-pub { margin: .85rem 0 1rem; }
+.news-title { line-height: 1.35; }
+.news-title a { text-decoration: none; }
+.news-meta { font-size: .95rem; color: #555; margin-top: .2rem; }
+.news-actions { margin-top: .35rem; }
+.btn.btn-pub { display: inline-block; margin-right: .5rem; margin-top: .15rem; }
