@@ -33,10 +33,20 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --trace
+
+      # 👇 DEBUG: verifica che le pagine di dettaglio siano state generate
+      - name: List generated detail pages
+        run: |
+          echo "Listing _site/bibliography:"
+          ls -la _site/bibliography || true
+          echo "Listing _site/debug:"
+          ls -la _site/debug || true
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
+      
 
   deploy:
     needs: build
