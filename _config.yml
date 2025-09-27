@@ -280,7 +280,7 @@ whitelist:
 scholar:
   source: _bibliography
   bibliography: papers.bib
-  style: ieee      # puoi sostituire con un tuo .csl in /_bibliography/
+  style: apa      # puoi sostituire con un tuo .csl in /_bibliography/
   locale: en
   sort_by: year
   order: descending
