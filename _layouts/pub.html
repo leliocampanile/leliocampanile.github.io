@@ -9,10 +9,10 @@ layout: single
 
 <article class="pub-detail">
   <header>
-    <h1 class="page__title">{{ entry.title }}</h1>
+    <h1 class="page__title">{{ page.entry.title }}</h1>
     <p class="page__meta">
       <span class="pub-badge pub-badge-{{ pub_type | downcase }}">{{ pub_type }}</span>
-      {{ entry.author }}
+      {{ page.entry.author }}
       {%- if page.entry.year %} — {{ page.entry.year }}{% endif -%}
       {%- if venue %} · <em>{{ venue }}</em>{% endif -%}
     </p>
@@ -22,17 +22,17 @@ layout: single
   <section>
     <h2>Venue & metadata</h2>
     <ul>
-      {%- if page.entry.volume %}<li><strong>Volume:</strong> {{ entry.volume }}</li>{% endif -%}
-      {%- if page.entry.number %}<li><strong>Number:</strong> {{ entry.number }}</li>{% endif -%}
-      {%- if page.entry.pages %}<li><strong>Pages:</strong> {{ entry.pages }}</li>{% endif -%}
-      {%- if page.entry.publisher %}<li><strong>Publisher:</strong> {{ entry.publisher }}</li>{% endif -%}
-      {%- if page.entry.editor %}<li><strong>Editors:</strong> {{ entry.editor }}</li>{% endif -%}
-      {%- if page.entry.isbn %}<li><strong>ISBN:</strong> {{ entry.isbn }}</li>{% endif -%}
-      {%- if page.entry.issn %}<li><strong>ISSN:</strong> {{ entry.issn }}</li>{% endif -%}
-      {%- if page.entry.address %}<li><strong>Location:</strong> {{ entry.address }}</li>{% endif -%}
-      {%- if page.entry.note %}<li><strong>Note:</strong> {{ entry.note }}</li>{% endif -%}
-      {%- if page.entry.award %}<li><strong>Award:</strong> 🏅 {{ entry.award }}</li>{% endif -%}
-      {%- if page.entry.keywords %}<li><strong>Keywords:</strong> {{ entry.keywords }}</li>{% endif -%}
+      {%- if page.entry.volume %}<li><strong>Volume:</strong> {{ page.entry.volume }}</li>{% endif -%}
+      {%- if page.entry.number %}<li><strong>Number:</strong> {{ page.entry.number }}</li>{% endif -%}
+      {%- if page.entry.pages %}<li><strong>Pages:</strong> {{ page.entry.pages }}</li>{% endif -%}
+      {%- if page.entry.publisher %}<li><strong>Publisher:</strong> {{ page.entry.publisher }}</li>{% endif -%}
+      {%- if page.entry.editor %}<li><strong>Editors:</strong> {{ page.entry.editor }}</li>{% endif -%}
+      {%- if page.entry.isbn %}<li><strong>ISBN:</strong> {{ page.entry.isbn }}</li>{% endif -%}
+      {%- if page.entry.issn %}<li><strong>ISSN:</strong> {{ page.entry.issn }}</li>{% endif -%}
+      {%- if page.entry.address %}<li><strong>Location:</strong> {{ page.entry.address }}</li>{% endif -%}
+      {%- if page.entry.note %}<li><strong>Note:</strong> {{ page.entry.note }}</li>{% endif -%}
+      {%- if page.entry.award %}<li><strong>Award:</strong> 🏅 {{ page.entry.award }}</li>{% endif -%}
+      {%- if page.entry.keywords %}<li><strong>Keywords:</strong> {{ page.entry.keywords }}</li>{% endif -%}
     </ul>
   </section>
 
@@ -50,7 +50,7 @@ layout: single
   <section>
     <h2>Keywords</h2>
     <p>
-      {%- assign kwlist = entry.keywords | split: "," -%}
+      {%- assign kwlist = page.entry.keywords | split: "," -%}
       {%- for kw in kwlist -%}
         <span class="pub-tag">{{ kw | strip }}</span>
       {%- endfor -%}
@@ -62,25 +62,25 @@ layout: single
   <section>
     <h2>Links & artifacts</h2>
     <p>
-      {% if page.entry.doi %}<a class="btn btn-pub" href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
-      {% if page.entry.url %}<a class="btn btn-pub" href="{{ entry.url }}" target="_blank" rel="noopener">Publisher</a>{% endif %}
+      {% if page.entry.doi %}<a class="btn btn-pub" href="https://doi.org/{{ page.entry.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+      {% if page.entry.url %}<a class="btn btn-pub" href="{{ page.entry.url }}" target="_blank" rel="noopener">Publisher</a>{% endif %}
       {% if site.scholar.repository %}
-        {% assign pdf = site.scholar.repository | append: '/' | append: entry.key | append: '.pdf' | relative_url %}
+        {% assign pdf = site.scholar.repository | append: '/' | append: page.entry.key | append: '.pdf' | relative_url %}
         <a class="btn btn-pub" href="{{ pdf }}" target="_blank" rel="noopener">PDF</a>
       {% endif %}
 
       {%- comment -%} campi opzionali nel .bib: code, dataset, slides, video {%- endcomment -%}
-      {% if page.entry.code %}<a class="btn btn-pub" href="{{ entry.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
-      {% if page.entry.dataset %}<a class="btn btn-pub" href="{{ entry.dataset }}" target="_blank" rel="noopener">Dataset</a>{% endif %}
-      {% if page.entry.slides %}<a class="btn btn-pub" href="{{ entry.slides }}" target="_blank" rel="noopener">Slides</a>{% endif %}
-      {% if page.entry.video %}<a class="btn btn-pub" href="{{ entry.video }}" target="_blank" rel="noopener">Video</a>{% endif %}
+      {% if page.entry.code %}<a class="btn btn-pub" href="{{ page.entry.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+      {% if page.entry.dataset %}<a class="btn btn-pub" href="{{ page.entry.dataset }}" target="_blank" rel="noopener">Dataset</a>{% endif %}
+      {% if page.entry.slides %}<a class="btn btn-pub" href="{{ page.entry.slides }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+      {% if page.entry.video %}<a class="btn btn-pub" href="{{ page.entry.video }}" target="_blank" rel="noopener">Video</a>{% endif %}
 
-      <button class="btn btn-pub copy-bib" data-key="{{ entry.key }}">Copy BibTeX</button>
-      <button class="btn btn-pub download-bib" data-key="{{ entry.key }}">Download .bib</button>
+      <button class="btn btn-pub copy-bib" data-key="{{ page.entry.key }}">Copy BibTeX</button>
+      <button class="btn btn-pub download-bib" data-key="{{ page.entry.key }}">Download .bib</button>
     </p>
 
-    <pre id="bib-{{ entry.key }}" class="bibtex" style="display:none">
-{{ entry | bibtex }}
+    <pre id="bib-{{ page.entry.key }}" class="bibtex" style="display:none">
+{{ page.entry | bibtex }}
     </pre>
   </section>
 
@@ -107,6 +107,6 @@ Compila campi base per Rich Results. Se mancano alcuni campi, vengono omessi.
   {% if page.entry.doi %}"identifier": "https://doi.org/{{ entry.doi }}",{% endif %}
   {% if venue %}"isPartOf": {"name": {{ venue | jsonify }}},{% endif %}
   {% if page.entry.url %}"url": {{ page.entry.url | jsonify }},{% endif %}
-  "publisher": {{ entry.publisher | default: "Unknown" | jsonify }}
+  "publisher": {{ page.entry.publisher | default: "Unknown" | jsonify }}
 }{%- endcapture -%}
 <script type="application/ld+json">{{ jsonld | strip }}</script>
