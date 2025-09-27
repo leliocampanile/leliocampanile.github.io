@@ -276,6 +276,11 @@ whitelist:
   - jekyll-feed
   - jemoji
 
+google_scholar:
+  author_name: Lelio Campanile
+  scholar_user: U255xOIAAAAJ
+  scholar_lang: en
+
 # jekyll-scholar plugin configuration
 scholar:
   source: _bibliography
@@ -290,6 +295,19 @@ scholar:
   repository: assets/papers
   # usa un template custom per ogni voce (lo creiamo sotto)
   bibliography_template: bibliography_item
+  bibtex_skip_fields:
+    - abstract
+    - url
+    - note
+    - keywords
+    - author_keywords
+    - source
+    - publication_stage
+    - issn
+    - isbn
+    - address
+    - editor
+    - month_numeric
 
 # Archives
 #  Type
