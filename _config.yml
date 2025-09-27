@@ -284,7 +284,7 @@ scholar:
   locale: en
   sort_by: year
   order: descending
-  details_dir: _bibliography/items         # cartella dove generare le pagine (URL: /bibliography/<key>.html)
+  details_dir: pubblications         # cartella dove generare le pagine (URL: /bibliography/<key>.html)
   details_layout: pub               # layout usato per ogni pagina di dettaglio
   details_link: "Details"           
   repository: assets/papers
