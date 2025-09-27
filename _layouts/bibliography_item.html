@@ -1,0 +1,32 @@
+<div class="pub-item">
+  <!-- Citazione completa formattata da CSL -->
+  <div class="citation">{{ reference }}</div>
+
+  <!-- Abstract a scomparsa (se presente nel .bib) -->
+  {% if entry.abstract %}
+  <details class="pub-abstract">
+    <summary>Abstract</summary>
+    <div class="abstract-body">
+      {{ entry.abstract }}
+    </div>
+  </details>
+  {% endif %}
+
+  <!-- Azioni: DOI/URL + Copy/Download BibTeX -->
+  <div class="pub-actions">
+    {% if entry.doi %}
+      <a class="btn btn-pub" href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener">DOI</a>
+    {% endif %}
+    {% if entry.url %}
+      <a class="btn btn-pub" href="{{ entry.url }}" target="_blank" rel="noopener">Publisher</a>
+    {% endif %}
+
+    <button class="btn btn-pub copy-bib" data-key="{{ entry.key }}">Copy BibTeX</button>
+    <button class="btn btn-pub download-bib" data-key="{{ entry.key }}">Download .bib</button>
+
+    <!-- BibTeX grezzo nascosto (per copy/download) -->
+    <pre id="bib-{{ entry.key }}" class="bibtex" style="display:none">
+{{ entry.bibtex }}
+    </pre>
+  </div>
+</div>
