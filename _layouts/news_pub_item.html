@@ -1,0 +1,37 @@
+{%- comment -%}
+Template compatto per la Home.
+Mostra: Titolo (link) · autori · venue, anno · link Details (pagina generata) · DOI (se c'è)
+{%- endcomment -%}
+
+{%- assign venue = entry.journal | default: entry.booktitle | default: entry.series -%}
+{%- assign detail_path = '/' | append: site.scholar.details_dir | append: '/' | append: entry.key | append: '.html' -%}
+{%- assign detail_url = detail_path | relative_url -%}
+{%- assign primary_link = nil -%}
+{%- if entry.doi -%}
+  {%- assign primary_link = 'https://doi.org/' | append: entry.doi -%}
+{%- elsif entry.url -%}
+  {%- assign primary_link = entry.url -%}
+{%- endif -%}
+
+<div class="news-pub">
+  <div class="news-title">
+    {%- if primary_link -%}
+      <strong><a href="{{ primary_link }}" target="_blank" rel="noopener">{{ entry.title }}</a></strong>
+    {%- else -%}
+      <strong><a href="{{ detail_url }}">{{ entry.title }}</a></strong>
+    {%- endif -%}
+  </div>
+
+  <div class="news-meta">
+    {{ entry.author }}
+    {%- if venue %} — <em>{{ venue }}</em>{% endif -%}
+    {%- if entry.year %}, {{ entry.year }}{% endif -%}
+  </div>
+
+  <div class="news-actions">
+    <a class="btn btn-pub" href="{{ detail_url }}">Details</a>
+    {%- if entry.doi -%}
+      <a class="btn btn-pub" href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener">DOI</a>
+    {%- endif -%}
+  </div>
+</div>
