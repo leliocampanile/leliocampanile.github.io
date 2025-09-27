@@ -2,15 +2,39 @@
 layout: single
 ---
 
+{%- assign venue = entry.journal | default: entry.booktitle | default: entry.series -%}
+{%- assign pub_type = "Other" -%}
+{%- if entry.journal -%}{% assign pub_type = "Journal" %}
+{%- elsif entry.booktitle -%}{% assign pub_type = "Conference" %}{%- endif -%}
+
 <article class="pub-detail">
   <header>
     <h1 class="page__title">{{ entry.title }}</h1>
     <p class="page__meta">
-      {{ entry.author }}{% if entry.year %} — {{ entry.year }}{% endif %}
-      {% assign venue = entry.journal | default: entry.booktitle | default: entry.series %}
-      {% if venue %} · <em>{{ venue }}</em>{% endif %}
+      <span class="pub-badge pub-badge-{{ pub_type | downcase }}">{{ pub_type }}</span>
+      {{ entry.author }}
+      {%- if entry.year %} — {{ entry.year }}{% endif -%}
+      {%- if venue %} · <em>{{ venue }}</em>{% endif -%}
     </p>
   </header>
+
+  {%- comment -%} V E N U E  &  M E T A {%- endcomment -%}
+  <section>
+    <h2>Venue & metadata</h2>
+    <ul>
+      {%- if entry.volume %}<li><strong>Volume:</strong> {{ entry.volume }}</li>{% endif -%}
+      {%- if entry.number %}<li><strong>Number:</strong> {{ entry.number }}</li>{% endif -%}
+      {%- if entry.pages %}<li><strong>Pages:</strong> {{ entry.pages }}</li>{% endif -%}
+      {%- if entry.publisher %}<li><strong>Publisher:</strong> {{ entry.publisher }}</li>{% endif -%}
+      {%- if entry.editor %}<li><strong>Editors:</strong> {{ entry.editor }}</li>{% endif -%}
+      {%- if entry.isbn %}<li><strong>ISBN:</strong> {{ entry.isbn }}</li>{% endif -%}
+      {%- if entry.issn %}<li><strong>ISSN:</strong> {{ entry.issn }}</li>{% endif -%}
+      {%- if entry.address %}<li><strong>Location:</strong> {{ entry.address }}</li>{% endif -%}
+      {%- if entry.note %}<li><strong>Note:</strong> {{ entry.note }}</li>{% endif -%}
+      {%- if entry.award %}<li><strong>Award:</strong> 🏅 {{ entry.award }}</li>{% endif -%}
+      {%- if entry.keywords %}<li><strong>Keywords:</strong> {{ entry.keywords }}</li>{% endif -%}
+    </ul>
+  </section>
 
   <section>
     <h2>Abstract</h2>
@@ -21,8 +45,9 @@ layout: single
     {% endif %}
   </section>
 
+  {%- comment -%} A R T I F A C T S  &  L I N K S {%- endcomment -%}
   <section>
-    <h2>Links</h2>
+    <h2>Links & artifacts</h2>
     <p>
       {% if entry.doi %}<a class="btn btn-pub" href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
       {% if entry.url %}<a class="btn btn-pub" href="{{ entry.url }}" target="_blank" rel="noopener">Publisher</a>{% endif %}
@@ -30,6 +55,13 @@ layout: single
         {% assign pdf = site.scholar.repository | append: '/' | append: entry.key | append: '.pdf' | relative_url %}
         <a class="btn btn-pub" href="{{ pdf }}" target="_blank" rel="noopener">PDF</a>
       {% endif %}
+
+      {%- comment -%} campi opzionali nel .bib: code, dataset, slides, video {%- endcomment -%}
+      {% if entry.code %}<a class="btn btn-pub" href="{{ entry.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+      {% if entry.dataset %}<a class="btn btn-pub" href="{{ entry.dataset }}" target="_blank" rel="noopener">Dataset</a>{% endif %}
+      {% if entry.slides %}<a class="btn btn-pub" href="{{ entry.slides }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+      {% if entry.video %}<a class="btn btn-pub" href="{{ entry.video }}" target="_blank" rel="noopener">Video</a>{% endif %}
+
       <button class="btn btn-pub copy-bib" data-key="{{ entry.key }}">Copy BibTeX</button>
       <button class="btn btn-pub download-bib" data-key="{{ entry.key }}">Download .bib</button>
     </p>
@@ -46,3 +78,22 @@ layout: single
 
   <p><a href="{{ '/publications/' | relative_url }}">← Back to Publications</a></p>
 </article>
+
+{%- comment -%}
+S E O  /  J S O N - L D  (facoltativo ma consigliato)
+Compila campi base per Rich Results. Se mancano alcuni campi, vengono omessi.
+{%- endcomment -%}
+{%- capture jsonld -%}{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": {{ entry.title | jsonify }},
+  "name": {{ entry.title | jsonify }},
+  {% if entry.author %}"author": {{ entry.author | jsonify }},{% endif %}
+  {% if entry.abstract %}"abstract": {{ entry.abstract | strip_newlines | jsonify }},{% endif %}
+  {% if entry.year %}"datePublished": "{{ entry.year }}",{% endif %}
+  {% if entry.doi %}"identifier": "https://doi.org/{{ entry.doi }}",{% endif %}
+  {% if venue %}"isPartOf": {"name": {{ venue | jsonify }}},{% endif %}
+  {% if entry.url %}"url": {{ entry.url | jsonify }},{% endif %}
+  "publisher": {{ entry.publisher | default: "Unknown" | jsonify }}
+}{%- endcapture -%}
+<script type="application/ld+json">{{ jsonld | strip }}</script>
