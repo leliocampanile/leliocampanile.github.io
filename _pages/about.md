@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Lelio Campanile"
+subtitle: "Assistant Professor of Computer Science – Università degli Studi della Campania *Luigi Vanvitelli*"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,12 +9,18 @@ redirect_from:
   - /about.html
 ---
 
+I hold a degree in Computer Engineering and I am currently an **Assistant Professor (RTD-A)** at the Department of Mathematics and Physics, Università degli Studi della Campania *Luigi Vanvitelli*.  
+Previously, I worked at the same university as a professional computer scientist and also as a freelancer, focusing on the **design and development of software systems**, **Linux system administration**, and **network engineering**.  
 
+I have a long-standing experience as a trainer and instructor for both companies and public institutions. For three years, I taught in the **Apple Developer Academy of Naples**, delivering foundation courses. I am also actively engaged in the Python community: I am a member of the Italian Python Association, a **Managing Member of the Python Software Foundation (PSF)**, and founder and organizer of [PyCampania](https://www.pycampania.it), the Python Campania community. I also contribute to the organization of [PyCon Italia](https://www.pycon.it), the flagship Python conference in Italy.
 
-I have a degree in computer engineering, I currently work as assistant professor (RTDa) at Department of Mathematics and Physics of Università degli Studi della Campania "L. Vanvitelli", previously  I worked at the University of Campania ”L. Vanvitelli” as  a computer scientist professional  and as a freelancer for the design and development of software systems, as an administrator of linux systems and as a network systems engineer. I have a long experience as a trainer and teacher for companies and public institutions,  I taught for 3 years for the Apple Academy of Naples in foundation courses. I am a member of Italian Python Association and I am a Managing PSF (Python Software Foundation) Member. Passed the government exam and licensed as a professional engineer section A - Informatics (Computer Science), and enrolled as a member of the Italian Engineering Society;  I am member of IEEE and other scientific societies.
+I am a licensed professional engineer, having passed the government exam for **Engineer Section A – Computer Science**, and I am a member of the **Italian Engineering Society**. I am also an active member of **IEEE** and other scientific societies.  
 
-I regularly publish  peer reviewed articles, including Journal, conference and book chapters and I have served as scientific conference commitee, chairman and reviewer for several scientific journal. 
+---
 
-My research activity is primarily focused on modeling of complex computer-based system, Wireless Sensor Network and Cyber-Physical Systems, using formal and non-formal method, with a focus on Machine Learning and Deep Learning and eXplainable Artificial Intelligence techniques and their integration in the modeling and analysis of such systems and non-functional requirements such as performance, privacy and security.
+## Research
 
-I am involved in Pyton Italia community and in the organization of its flagship conference [PyconIT](https://www.pycon.it). I am founder and meet-up organizer of [PyCampania](https://www.pycampania.it), the Python Campania Community. 
+My research is primarily focused on the **modeling of complex computer-based systems**, including **Wireless Sensor Networks (WSN)** and **Cyber-Physical Systems (CPS)**, using both formal and non-formal methods.  
+I investigate the integration of **Machine Learning**, **Deep Learning**, and **eXplainable Artificial Intelligence (XAI)** techniques into modeling and analysis, with particular attention to **non-functional requirements** such as **performance, privacy, and security**.  
+
+I regularly publish peer-reviewed work, including journal articles, conference papers, and book chapters. I also serve as **reviewer, committee member, and session chair** in several international conferences and scientific journals.
