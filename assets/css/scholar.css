@@ -1,0 +1,5 @@
+.pub-item { margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
+.pub-item .citation { margin-bottom: .5rem; }
+.pub-abstract summary { cursor: pointer; font-weight: 600; }
+.pub-abstract .abstract-body { margin-top: .5rem; }
+.btn.btn-pub { display: inline-block; margin-right: .5rem; margin-top: .5rem; }
