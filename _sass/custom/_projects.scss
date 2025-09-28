@@ -1,0 +1,62 @@
+/* === Projects page styles === */
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-item {
+  border-left: 3px solid #4caf50;
+  margin: 1.4em 0;
+  padding: 0.7em 1em;
+  background: #fdfdfd;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: background 0.2s ease;
+}
+.project-item:hover { background: #f8fdf8; }
+
+.project-header {
+  font-weight: 600;
+  margin-bottom: 0.4em;
+}
+
+.project-period {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #555;
+  margin-right: 0.5em;
+}
+
+.project-title a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+.project-title a:hover { text-decoration: underline; }
+
+.project-meta {
+  font-size: 0.9em;
+  color: #444;
+  margin-bottom: 0.5em;
+}
+
+.project-summary {
+  margin: 0.5em 0 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.project-tags {
+  margin-top: 0.5em;
+}
+.project-tag {
+  display: inline-block;
+  background: #eef6ee;
+  color: #4caf50;
+  font-size: 0.75em;
+  font-weight: 500;
+  padding: 0.2em 0.6em;
+  border-radius: 12px;
+  margin: 0 0.3em 0.3em 0;
+}
