@@ -4,39 +4,47 @@
     "start_year": 2010,
     "end_year": 2011,
     "title": "SUN High Speed Networks",
-    "org": "Università della Campania “L. Vanvitelli” (ex SUN)",
-    "role": "Team member",
-    "summary": "Dorsale in fibra tra sedi universitarie distribuite in Campania.",
-    "tags": ["Networking", "Backbone", "Fiber"]
+    "org": "Università della Campania Luigi Vanvitelli (former SUN)",
+    "partner": "",
+    "role": "Project Team Member",
+    "summary": "The project provided fiber optic connection among the University sites distributed across the Campania region.",
+    "links": [],
+    "tags": ["Networking", "Fiber Optics", "Infrastructure"]
   },
   {
     "period": "2008–2009",
     "start_year": 2008,
     "end_year": 2009,
     "title": "WIFI SUN",
-    "org": "Università della Campania “L. Vanvitelli” (ex SUN)",
-    "role": "Team member",
-    "summary": "Rete Wi-Fi per studenti su oltre 10 sedi.",
-    "tags": ["Wi-Fi", "Campus", "Networking"]
+    "org": "Università della Campania Luigi Vanvitelli (former SUN)",
+    "partner": "",
+    "role": "Project Team Member",
+    "summary": "The project provided a Wi-Fi network for students, deployed across 10 university sites.",
+    "links": [],
+    "tags": ["Networking", "Wi-Fi", "Infrastructure"]
   },
   {
     "period": "2013–2015",
     "start_year": 2013,
     "end_year": 2015,
-    "title": "RIMIC",
-    "org": "Rete di Interconnessione Multiservizio Interuniversitaria Campana",
-    "role": "Working team",
-    "summary": "Servizi di rete regionali su fibra (WDM) a supporto di ricerca e didattica.",
-    "tags": ["WDM", "Backbone", "Campus"]
+    "title": "RIMIC – Rete di Interconnessione Multiservizio Interuniversitaria Campana",
+    "org": "Università della Campania Luigi Vanvitelli",
+    "partner": "",
+    "role": "Project Team Member",
+    "summary": "Development of a multiservice interuniversity network based on fiber optics and WDM technology, enabling advanced networking services across the Campania region.",
+    "links": [],
+    "tags": ["Networking", "Fiber Optics", "WDM", "Infrastructure"]
   },
   {
     "period": "2013",
     "start_year": 2013,
     "end_year": 2013,
-    "title": "University Datacenter (Caserta)",
-    "org": "Università della Campania “L. Vanvitelli”",
-    "role": "Design team",
-    "summary": "Progettazione del nuovo datacenter di ateneo.",
+    "title": "University Datacenter",
+    "org": "Università della Campania Luigi Vanvitelli",
+    "partner": "",
+    "role": "Project Team Member",
+    "summary": "Design of the new university datacenter at the Caserta site.",
+    "links": [],
     "tags": ["Datacenter", "Infrastructure"]
   },
   {
@@ -44,19 +52,91 @@
     "start_year": 2013,
     "end_year": 2013,
     "title": "University Website",
-    "org": "Università della Campania “L. Vanvitelli”",
-    "role": "Working group",
-    "summary": "Redesign del sito istituzionale.",
-    "tags": ["Web", "Institutional"]
+    "org": "Università della Campania Luigi Vanvitelli",
+    "partner": "",
+    "role": "Project Team Member",
+    "summary": "Design of the new official university website.",
+    "links": [],
+    "tags": ["Web", "University", "Infrastructure"]
+  },
+{
+  "period": "2022",
+  "start_year": 2022,
+  "end_year": 2022,
+  "title": "School Network Designer (PON)",
+  "org": "Liceo Statale Ischia (NA); 36th Didactic Circle Naples",
+  "role": "Network Designer",
+  "summary": "Structured and secure cabling for school buildings.",
+  "tags": ["School", "LAN", "Security"]
+},
+  {
+    "period": "2023",
+    "start_year": 2023,
+    "end_year": 2023,
+    "title": "School Network Designer (PON)",
+    "org": "I Circolo Didattico Angri",
+    "role": "Network Designer",
+    "summary": "Structured and secure cabling for school buildings.",
+    "tags": ["School", "LAN", "Security"]
+  },
+  {
+    "period": "2024",
+    "start_year": 2024,
+    "end_year": 2024,
+    "title": "School Network Designer (PON)",
+    "org": "Scuola Secondaria di Primo Grado 'G. Pascoli', Aversa",
+    "role": "Network Designer",
+    "summary": "Structured and secure cabling for school buildings.",
+    "tags": ["School", "LAN", "Security"]
   },
   {
     "period": "2022",
     "start_year": 2022,
     "end_year": 2022,
-    "title": "Progettista reti scolastiche (PON)",
-    "org": "Liceo Statale Ischia (NA); 36° Circolo Didattico Napoli",
-    "role": "Progettista",
-    "summary": "Cablaggio strutturato e sicuro per plessi scolastici.",
+    "title": "School Network Designer (PON)",
+    "org": "I.S. Casanova, Naples",
+    "role": "Network Designer",
+    "summary": "Structured and secure cabling for school buildings.",
     "tags": ["School", "LAN", "Security"]
-  }
+  },
+  {
+    "period": "2023",
+    "start_year": 2023,
+    "end_year": 2023,
+    "title": "School Network Designer (PON)",
+    "org": "Liceo Statale 'G. Buchner', Ischia",
+    "role": "Network Designer",
+    "summary": "Structured and secure cabling for school buildings.",
+    "tags": ["School", "LAN", "Security"]
+  },
+  {
+    "period": "2023",
+    "start_year": 2023,
+    "end_year": 2023,
+    "title": "School Network Designer (PON)",
+    "org": "Liceo Scientifico Linguistico Scienze Umane Immanuel Kant, Melito di Napoli",
+    "role": "Network Designer",
+    "summary": "Structured and secure cabling for school buildings.",
+    "tags": ["School", "LAN", "Security"]
+  },
+  {
+    "period": "2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "title": "School Network Designer (PON)",
+    "org": "36th Didactic Circle, State Kindergarten and Primary School, Naples",
+    "role": "Network Designer",
+    "summary": "Structured and secure cabling for school buildings.",
+    "tags": ["School", "LAN", "Security"]
+  },
+  {
+  "period": "2022-2024",
+  "start_year": 2022,
+  "end_year": 2024,
+  "title": "ICT Management Support",
+  "org": "Fattorie Garofalo Società Cooperativa a R.L.",
+  "role": "ICT Advisor",
+  "summary": "Provided directional support for ICT activities, assisting in the coordination and strategic management of information systems.",
+  "tags": ["ICT", "Management", "Support"]
+}
 ]

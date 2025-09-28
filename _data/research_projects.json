@@ -7,23 +7,33 @@
     "org": "Università della Campania “L. Vanvitelli”",
     "program": "PNRR – NextGenerationEU",
     "role": "WP1 Lead (9 mesi)",
-    "summary": "Coordinamento scientifico sul WP1 per metriche e policy low-carbon.",
-    "links": [
-      { "label": "Project", "url": "#" }
-    ],
+    "summary": "Scientific coordinator of WP1, focusing on low-carbon metrics and policy development.",
+    "links": [],
     "tags": ["PNRR", "Sustainability", "Policy", "Metrics"]
   },
   {
-    "period": "2022–ongoing",
+    "period": "2022",
     "start_year": 2022,
-    "end_year": null,
+    "end_year": 2022,
     "title": "Meditech CC 4.0 – Radiometric camera auto-compensation (ML)",
     "org": "Centro di Competenza Meditech",
     "partner": "GAM Engineering SRL",
-    "role": "Responsabile scientifico convenzione",
-    "summary": "Sistema TRL7 per compensazione automatica di telecamere radiometriche con ML.",
+    "role": "Principal Investigator",
+    "summary": "System for automatic compensation of radiometric cameras using Machine Learning.",
     "links": [],
     "tags": ["ML", "Computer Vision", "Industry 4.0"]
+  },
+  {
+    "period": "2022-07-20 – 2022-12-15",
+    "start_year": 2022,
+    "end_year": 2022,
+    "title": "Shift2Rail – Performingrail (Task 2.5, WP2)",
+    "org": "Horizon 2020 Shift2Rail",
+    "partner": "",
+    "role": "Task Leader",
+    "summary": "Leadership of Task 2.5 in WP2 on verification and composition of formal models for Moving Block systems, contributing to Deliverable 2.3 and developing formal models in UPPAAL.",
+    "links": [],
+    "tags": ["H2020", "Shift2Rail", "Formal Methods", "UPPAAL", "Railway Systems"]
   },
   {
     "period": "2022–ongoing",
@@ -32,7 +42,7 @@
     "title": "heriVolo s.r.l. – Academic spin-off",
     "org": "Università della Campania “L. Vanvitelli”",
     "role": "Founder & lead",
-    "summary": "Deep augmented holography, NLP e contextual intelligence. Premio ricerca industriale (20k€).",
+    "summary": "Deep augmented holography, NLP e contextual intelligence. Industrial Research Award (20k€).",
     "links": [],
     "tags": ["Spin-off", "NLP", "Holography", "AI"]
   },
@@ -42,9 +52,22 @@
     "end_year": null,
     "title": "DIGIT-Aversa – Smart City",
     "org": "Comune di Aversa & CNR-ISMed",
-    "role": "Collaboratore scientifico",
-    "summary": "Progetti ICT e dati territoriali per servizi urbani intelligenti.",
+    "role": "Research collaborator ",
+    "summary": "ICT and territorial data projects for smart urban services.",
     "links": [],
     "tags": ["Smart City", "Data", "Public Sector"]
+  },
+  {
+    "period": "2020",
+    "start_year": 2020,
+    "end_year": 2020,
+    "title": "WAIILD TROLS: Web Artificial Intelligence for Information Literacy Dissemination – TRuth Or Lies Sources?",
+    "org": "Università degli Studi della Campania 'L. Vanvitelli'",
+    "partner": "",
+    "role": "Principal Investigator",
+    "summary": "Funded by Programma V:ALERE 2020, this project focused on artificial intelligence approaches for information literacy dissemination, with emphasis on truthfulness and source reliability.",
+    "links": [],
+    "tags": ["AI", "Information Literacy", "Dissemination", "Misinformation"]
   }
+
 ]
