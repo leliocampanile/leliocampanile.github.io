@@ -29,10 +29,7 @@ jobs:
           bundler-cache: true
       - name: Install dependencies
         run: bundle install --jobs 4
-      - name: Build site
-        env:
-          JEKYLL_ENV: production
-        run: bundle exec jekyll build --trace
+
 
       - name: Generate keyword pages from .bib
         run: |
@@ -90,6 +87,11 @@ jobs:
           puts "Generated #{counts.size} keyword pages in _keywords/"
           RUBY
           
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --trace
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
