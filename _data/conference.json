@@ -1,0 +1,222 @@
+[
+  {
+    "period": "23/11/2018",
+    "start_year": 2018,
+    "end_year": 2018,
+    "title": "InfQ 2018 — Speaker",
+    "org": "Politecnico di Milano (Italy)",
+    "role": "Speaker",
+    "summary": "Presented the paper “Modeling of traffic effects in a router for autonomic networks” at InfQ 2018 (8th Workshop of the Italian group on Quantitative Methods in Informatics).",
+    "link": "",
+    "tags": ["Conference", "Speaker", "Quantitative Methods"]
+  },
+  {
+    "period": "10–11/06/2019",
+    "start_year": 2019,
+    "end_year": 2019,
+    "title": "InfQ 2019 — Local Organizing Committee",
+    "org": "Department of Mathematics and Physics, Università della Campania “L. Vanvitelli” (Caserta, Italy)",
+    "role": "Local Organizing Committee",
+    "summary": "Local organizer for InfQ 2019 (9th Workshop of the Italian group on Quantitative Methods in Informatics).",
+    "link": "",
+    "tags": ["Conference", "Organization", "LOC"]
+  },
+  {
+    "period": "11–14/06/2019",
+    "start_year": 2019,
+    "end_year": 2019,
+    "title": "ECMS 2019 — Speaker",
+    "org": "ECMS 2019, Caserta (Italy)",
+    "role": "Speaker",
+    "summary": "Presented the paper “Performance modeling and analysis of an autonomic router” at the 33rd International ECMS Conference on Modelling and Simulation.",
+    "link": "",
+    "tags": ["Conference", "Speaker", "ECMS"]
+  },
+  {
+    "period": "11–14/06/2019",
+    "start_year": 2019,
+    "end_year": 2019,
+    "title": "ECMS 2019 — Local Organizing Committee",
+    "org": "Department of Mathematics and Physics, Università della Campania “L. Vanvitelli” (Caserta, Italy)",
+    "role": "Local Organizing Committee",
+    "summary": "Local organizer for the 33rd International ECMS Conference on Modelling and Simulation.",
+    "link": "",
+    "tags": ["Conference", "Organization", "LOC", "ECMS"]
+  },
+  {
+    "period": "07–09/05/2020",
+    "start_year": 2020,
+    "end_year": 2020,
+    "title": "IoTBDS 2020 — Speaker",
+    "org": "IoTBDS 2020 (online)",
+    "role": "Speaker",
+    "summary": "Presented the paper “Privacy Regulation Challenges on Data-Centric and IoT Systems: A Case Study for Smart Vehicles” at the 5th International Conference on Internet of Things, Big Data and Security.",
+    "link": "",
+    "tags": ["Conference", "Speaker", "IoTBDS", "Privacy", "IoT"]
+  },
+  {
+    "period": "09–12/06/2020",
+    "start_year": 2020,
+    "end_year": 2020,
+    "title": "ECMS 2020 — Track Co-Chair (DIS)",
+    "org": "ECMS 2020 (online)",
+    "role": "Track Co-Chair",
+    "summary": "Track Co-Chair for DIS — Modelling and Simulation of Data Intensive Systems (track family: MaSPECS).",
+    "link": "",
+    "tags": ["Conference", "Chair", "ECMS", "DIS", "MaSPECS"]
+  },
+  {
+    "period": "23–25/04/2021",
+    "start_year": 2021,
+    "end_year": 2021,
+    "title": "IoTBDS 2021 — Special Session Chair",
+    "org": "IoTBDS 2021 (online)",
+    "role": "Session Chair",
+    "summary": "Chaired the Special Session “Artificial Intelligence for Emerging IoT Systems: Open Challenges and Novel Perspectives”.",
+    "link": "",
+    "tags": ["Conference", "Chair", "IoTBDS", "AI", "IoT"]
+  },
+  {
+    "period": "23–25/04/2021",
+    "start_year": 2021,
+    "end_year": 2021,
+    "title": "IoTBDS 2021 — Speaker (Special Session)",
+    "org": "IoTBDS 2021 (online)",
+    "role": "Speaker",
+    "summary": "Presented the paper “Applying Machine Learning to Weather and Pollution Data Analysis for a Better Management of Local Areas: The Case of Napoli, Italy” in the Special Session on AI for Emerging IoT Systems.",
+    "link": "",
+    "tags": ["Conference", "Speaker", "IoTBDS", "AI", "IoT", "ML", "Environment"]
+  },
+  {
+    "period": "31/05–02/06/2021",
+    "start_year": 2021,
+    "end_year": 2021,
+    "title": "ECMS 2021 — Program Co-Chair",
+    "org": "ECMS 2021 (online, hosted by Kuwait College of Science and Technology)",
+    "role": "Program Co-Chair",
+    "summary": "Program Co-Chair for the 35th ECMS International Conference on Modelling and Simulation.",
+    "link": "",
+    "tags": ["Conference", "Program Chair", "ECMS"]
+  },
+  {
+    "period": "31/05–02/06/2021",
+    "start_year": 2021,
+    "end_year": 2021,
+    "title": "ECMS 2021 — Track Co-Chair (DIS)",
+    "org": "ECMS 2021 (online)",
+    "role": "Track Co-Chair",
+    "summary": "Track Co-Chair for DIS — Modelling and Simulation of Data Intensive Systems (track family: MaSPECS).",
+    "link": "",
+    "tags": ["Conference", "Chair", "ECMS", "DIS", "MaSPECS"]
+  },
+  {
+    "period": "13–16/09/2021",
+    "start_year": 2021,
+    "end_year": 2021,
+    "title": "ICCSA 2021 Workshop — Speaker",
+    "org": "ICCSA 2021, Cagliari (Italy) + online",
+    "role": "Speaker",
+    "summary": "Presented the paper “Risk Analysis of a GDPR-compliant Deletion Technique for Consortium Blockchains Based on Pseudonymization” at the workshop Privacy in the Cloud/Edge/IoT World (collocated with ICCSA 2021).",
+    "link": "",
+    "tags": ["Conference", "Speaker", "ICCSA", "Privacy", "Blockchain"]
+  },
+  {
+    "period": "13–16/09/2021",
+    "start_year": 2021,
+    "end_year": 2021,
+    "title": "ICCSA 2021 Workshop — Chair & Co-Organizer",
+    "org": "ICCSA 2021, Cagliari (Italy) + online",
+    "role": "Workshop Chair",
+    "summary": "Co-organizer and chair of the workshop Privacy in the Cloud/Edge/IoT World (collocated with ICCSA 2021).",
+    "link": "",
+    "tags": ["Conference", "Chair", "ICCSA", "Privacy", "Workshop"]
+  },
+  {
+    "period": "30/05–03/06/2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "title": "ECMS 2022 — Track Co-Chair (DIS)",
+    "org": "ECMS 2022",
+    "role": "Track Co-Chair",
+    "summary": "Track Co-Chair for DIS — Modelling and Simulation of Data Intensive Systems (track family: MaSPECS).",
+    "link": "",
+    "tags": ["Conference", "Chair", "ECMS", "DIS", "MaSPECS"]
+  },
+  {
+    "period": "20–22/06/2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "title": "KES-IDT 2022 — Special Session Chair",
+    "org": "KES-IDT 2022",
+    "role": "Session Chair",
+    "summary": "Organized and chaired the special session “Fake News and Information Literacy: Current State, Open Issues and Challenges in Automatic and AI-based Detection, Generation and Analytical Support Systems”.",
+    "link": "",
+    "tags": ["Conference", "Chair", "KES-IDT", "Fake News", "Information Literacy", "AI"]
+  },
+  {
+    "period": "22–24/06/2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "title": "SIS 2022 — Local Organizing Committee",
+    "org": "SIS 2022, Department of Mathematics and Physics, Università della Campania “L. Vanvitelli” (Caserta, Italy)",
+    "role": "Local Organizing Committee",
+    "summary": "Local organizer for SIS 2022 (The 51st Scientific Meeting of the Italian Statistical Society).",
+    "link": "",
+    "tags": ["Conference", "Organization", "LOC", "SIS"]
+  },
+  {
+    "period": "04–07/07/2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "title": "ICCSA 2022 Workshop — Chair & Co-Organizer",
+    "org": "ICCSA 2022, Málaga (Spain) + online",
+    "role": "Workshop Chair",
+    "summary": "Co-organized and chaired the workshop Privacy in the Cloud/Edge/IoT World (collocated with ICCSA 2022).",
+    "link": "",
+    "tags": ["Conference", "Chair", "ICCSA", "Privacy", "Workshop"]
+  },
+  {
+    "period": "04–07/07/2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "title": "ICCSA 2022 Workshop — Speaker",
+    "org": "ICCSA 2022, Málaga (Spain) + online",
+    "role": "Speaker",
+    "summary": "Presented the paper “Sensitive Information Detection Adopting Named Entity Recognition: a Proposed Methodology” at the workshop Privacy in the Cloud/Edge/IoT World.",
+    "link": "",
+    "tags": ["Conference", "Speaker", "ICCSA", "Privacy", "NER"]
+  },
+  {
+    "period": "12–15/09/2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "title": "IEEE CyberSciTech/PICom/DASC/CBDCom 2022 — Speaker",
+    "org": "Calabria (Italy) + online",
+    "role": "Speaker",
+    "summary": "Presented the paper “Towards privacy-aware software design in small and medium enterprises”.",
+    "link": "",
+    "tags": ["Conference", "Speaker", "IEEE", "CyberSciTech", "Privacy"]
+  },
+  {
+    "period": "06/2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "title": "Invited Seminar — NHL Stenden UAS",
+    "org": "NHL Stenden University of Applied Sciences, Leeuwarden (Netherlands)",
+    "role": "Invited Speaker",
+    "summary": "Invited seminar: “Machine Learning techniques applied to naval scrubber”.",
+    "link": "",
+    "tags": ["Invited Talk", "Seminar", "ML"]
+  },
+  {
+    "period": "07/2023",
+    "start_year": 2023,
+    "end_year": 2023,
+    "title": "ICCSA 2023 Workshop — Chair & Co-Organizer",
+    "org": "ICCSA 2023, Athens (Greece) + online",
+    "role": "Workshop Chair",
+    "summary": "Co-organized and chaired the workshop Privacy in the Cloud/Edge/IoT World (collocated with ICCSA 2023).",
+    "link": "",
+    "tags": ["Conference", "Chair", "ICCSA", "Privacy", "Workshop"]
+  }
+]
