@@ -286,15 +286,6 @@ scholar:
   source: _bibliography
   bibliography: papers.bib
   style: apa      # puoi sostituire con un tuo .csl in /_bibliography/
-  locale: en
-  sort_by: year
-  order: descending
-  details_dir: bibliography         # cartella dove generare le pagine (URL: /bibliography/<key>.html)
-  details_layout: pub.html               # layout usato per ogni pagina di dettaglio
-  details_link: "Details"           
-  repository: assets/papers
-  # usa un template custom per ogni voce (lo creiamo sotto)
-  bibliography_template: bibliography_item
   bibtex_skip_fields:
     - abstract
     - url
@@ -308,6 +299,16 @@ scholar:
     - address
     - editor
     - month_numeric
+  locale: en
+  sort_by: year
+  order: descending
+  details_dir: bibliography         # cartella dove generare le pagine (URL: /bibliography/<key>.html)
+  details_layout: pub.html               # layout usato per ogni pagina di dettaglio
+  details_link: "Details"           
+  repository: assets/papers
+  # usa un template custom per ogni voce (lo creiamo sotto)
+  bibliography_template: bibliography_item
+
 
 # Archives
 #  Type
