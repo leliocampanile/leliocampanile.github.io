@@ -52,3 +52,15 @@
 
 /* Nascondere il link “Details” auto-generato da jekyll-scholar */
 .bibliography a.details { display: none !important; }
+
+/* assets/css/projects.css (o nel tuo CSS custom) */
+.project-list { list-style: none; padding-left: 0; margin: 0 0 1.5rem; }
+.project-item { margin: .9rem 0 1.1rem; }
+.project-header { font-size: 1rem; line-height: 1.25; }
+.project-period { opacity: .75; margin-right: .4rem; white-space: nowrap; }
+.project-title { font-weight: 600; }
+.project-meta { opacity: .9; margin-top: .15rem; }
+.project-summary { margin: .35rem 0 0; }
+.project-tags { margin: .4rem 0 0; }
+.project-tag { display: inline-block; font-size: .8rem; padding: .1rem .5rem; border: 1px solid #ddd; border-radius: 999px; margin-right: .3rem; }
+.project-links a { text-decoration: none; }
