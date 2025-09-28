@@ -219,6 +219,28 @@
     "link": "",
     "tags": ["Conference", "Chair", "ICCSA", "Privacy", "Workshop"]
   },
+  {
+    "period": "07/2024",
+    "start_year": 2024,
+    "end_year": 2024,
+    "title": "ICCSA 2024 Workshop — Chair & Co-Organizer",
+    "org": "ICCSA 2024, Hanoi (Vietnam) + online",
+    "role": "Workshop Chair",
+    "summary": "Co-organized and chaired the workshop Privacy in the Cloud/Edge/IoT World (collocated with ICCSA 2024).",
+    "link": "",
+    "tags": ["Conference", "Chair", "ICCSA", "Privacy", "Workshop"]
+  },
+    {
+    "period": "06/2025",
+    "start_year": 2025,
+    "end_year": 2025,
+    "title": "ICCSA 2025 Workshop — Chair & Co-Organizer",
+    "org": "ICCSA 2025, Instambul (Türkiye) + online",
+    "role": "Workshop Chair",
+    "summary": "Co-organized and chaired the workshop Privacy in the Cloud/Edge/IoT World (collocated with ICCSA 2025).",
+    "link": "",
+    "tags": ["Conference", "Chair", "ICCSA", "Privacy", "Workshop"]
+  },
     {
     "period": "04/2025",
     "start_year": 2025,
@@ -230,4 +252,26 @@
     "link": "",
     "tags": ["Conference", "Speaker", "AINA", "Privacy", "NLP"]
   },
+    {
+    "period": "6–8/04/2025",
+    "start_year": 2025,
+    "end_year": 2025,
+    "title": "IoTBDS 2025 — Special Session Chair",
+    "org": "IoTBDS 2025, Porto (Portugal)",
+    "role": "Session Chair",
+    "summary": "Chaired the Special Session “Artificial Intelligence for Emerging IoT Systems: Open Challenges and Novel Perspectives”.",
+    "link": "",
+    "tags": ["Conference", "Chair", "IoTBDS", "AI", "IoT"]
+  },
+      {
+    "period": "30/06-05/07 2025",
+    "start_year": 2025,
+    "end_year": 2025,
+    "title": "IJCNN 2025 — Special Session Chair",
+    "org": "IJCNN 2025, Rome (Italy)",
+    "role": "Session Chair",
+    "summary": "Chaired the Special Session “GPAIT2: General Purpose Artificial Intelligence Technologies and Trustworthiness”.",
+    "link": "",
+    "tags": ["Conference", "Chair", "IJCNN", "AI", "NN"]
+  }
 ]
