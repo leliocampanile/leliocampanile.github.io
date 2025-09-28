@@ -1,6 +1,9 @@
 {%- comment -%} URL robusto alla pagina details (rispetta details_permalink/permalink globali) {%- endcomment -%}
 {%- capture detail_url -%}{% details_link entry.key %}{%- endcapture -%}
 
+{%- assign e = entry -%}
+
+
 {%- comment -%} Badge: prova dal type, poi fallback journal/booktitle {%- endcomment -%}
 {%- assign raw_kind = e.type | default: '' | downcase | strip -%}
 {%- assign pub_badge = nil -%}
@@ -16,11 +19,14 @@
 {%- endif -%}
 {%- assign pub_class = pub_badge | downcase | replace: ' ', '-' -%}
 
+{%- comment %} Classe CSS coerente (kebab-case) {% endcomment -%}
+{%- assign pub_class = pub_badge | downcase | replace: ' ', '-' -%}
+
 
 <div class="pub-item">
-  <span class="pub-badge pub-badge-{{ pub_class }}">{{ pub_badge }}</span>
+  
   <!-- Titolo linkato alla pagina di dettaglio -->
-  <div class="pub-title">
+  <div class="pub-title"><span class="pub-badge pub-badge-{{ pub_class }}">{{ pub_badge }}</span>
     <a href="{{ detail_url }}">{{ entry.title }}</a>
   </div>
 
