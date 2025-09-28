@@ -1,5 +1,104 @@
 [
   {
+    "period": "2024-2025",
+    "start_year": 2024,
+    "end_year": 2025,
+    "title": "Elements of Software Engineering",
+    "org": "Department of Mathematics and Physics, Università degli Studi della Campania 'L. Vanvitelli'",
+    "role": "Lecturer",
+    "summary": "6 CFU course for the Master's Degree in Science, Academic Year 2024/2025.",
+    "link": "",
+    "tags": ["Software Engineering", "Master", "Teaching"]
+  },
+  {
+    "period": "2024-2025",
+    "start_year": 2024,
+    "end_year": 2025,
+    "title": "Fundamentals of Programming",
+    "org": "Department of Mathematics and Physics, Università degli Studi della Campania 'L. Vanvitelli'",
+    "role": "Lecturer",
+    "summary": "6 CFU course for the Bachelor's Degree in Data Analytics, Academic Year 2024/2025.",
+    "link": "",
+    "tags": ["Programming", "Python", "Data Analytics", "Teaching"]
+  },
+  {
+    "period": "2024",
+    "start_year": 2024,
+    "end_year": 2024,
+    "title": "Data Management Course",
+    "org": "PhD Program in Mathematics, Physics and Engineering Applications, Università degli Studi della Campania 'L. Vanvitelli'",
+    "role": "Lecturer",
+    "summary": "PhD course, XL cycle.",
+    "link": "",
+    "tags": ["PhD", "Data Management", "Teaching"]
+  },
+  {
+    "period": "2023-2024",
+    "start_year": 2023,
+    "end_year": 2024,
+    "title": "Elements of Software Engineering",
+    "org": "Department of Mathematics and Physics, Università degli Studi della Campania 'L. Vanvitelli'",
+    "role": "Lecturer",
+    "summary": "6 CFU course for the Master's Degree in Science, Academic Year 2023/2024.",
+    "link": "",
+    "tags": ["Software Engineering", "Master", "Teaching"]
+  },
+  {
+    "period": "2022-2023",
+    "start_year": 2022,
+    "end_year": 2023,
+    "title": "Fundamentals of Programming",
+    "org": "Department of Mechanical and Aerospace Engineering, Università degli Studi della Campania 'L. Vanvitelli'",
+    "role": "Lecturer",
+    "summary": "6 CFU course for the Bachelor's Degree in Mechanical and Aerospace Engineering. From 15/02/2022 to 30/06/2023.",
+    "link": "",
+    "tags": ["Programming", "Engineering", "Teaching"]
+  },
+  {
+    "period": "2022-2023",
+    "start_year": 2022,
+    "end_year": 2023,
+    "title": "Fundamentals of Programming",
+    "org": "Department of Industrial Engineering, Università degli Studi della Campania 'L. Vanvitelli'",
+    "role": "Lecturer",
+    "summary": "6 CFU course for the Bachelor's Degree in Management Engineering. From 15/02/2022 to 30/06/2023.",
+    "link": "",
+    "tags": ["Programming", "Engineering", "Teaching"]
+  },
+  {
+    "period": "2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "title": "Basics of Deep Learning and Neural Networks in Python",
+    "org": "PhD Program in Mathematics, Physics and Engineering Applications, Università degli Studi della Campania 'L. Vanvitelli'",
+    "role": "Lecturer",
+    "summary": "PhD course, XXXVII cycle. 24 hours total (4 CFU), personal module of 12 hours (2 CFU). From 15/09/2022 to 30/10/2022.",
+    "link": "",
+    "tags": ["PhD", "Deep Learning", "Neural Networks", "Python", "Teaching"]
+  },
+  {
+    "period": "2022-2023",
+    "start_year": 2022,
+    "end_year": 2023,
+    "title": "Web and Cloud Programming",
+    "org": "Department of Mathematics and Physics, Università degli Studi della Campania 'L. Vanvitelli'",
+    "role": "Lecturer",
+    "summary": "6 CFU course for the Master's Degree in Mathematics, Academic Year 2022/2023.",
+    "link": "",
+    "tags": ["Web Programming", "Cloud", "Mathematics", "Teaching"]
+  },
+  {
+    "period": "2021-2022",
+    "start_year": 2021,
+    "end_year": 2022,
+    "title": "Fundamentals of Programming",
+    "org": "Department of Mechanical and Aerospace Engineering, Università degli Studi della Campania 'L. Vanvitelli'",
+    "role": "Lecturer",
+    "summary": "6 CFU course for the Bachelor's Degree in Mechanical and Aerospace Engineering. Starting from 15/02/2021.",
+    "link": "",
+    "tags": ["Programming", "Engineering", "Teaching"]
+  },
+  {
     "period": "2019/2020",
     "start_year": 2019,
     "end_year": 2020,

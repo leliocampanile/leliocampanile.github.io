@@ -1,5 +1,60 @@
 [
   {
+    "period": "04/2025 – 06/2025",
+    "start_year": 2025,
+    "end_year": 2025,
+    "title": "Python Course",
+    "org": "Assoservizi srl - Tuscany Region",
+    "role": "Teacher",
+    "summary": "Instructor of Python Course within the IFTS project 'Pro Developer - Software Design, Development, Testing, and Maintenance Technician' (Project code 315122) funded by Tuscany Region.",
+    "link": "",
+    "tags": ["Python", "Professional Training", "Teaching"]
+  },
+  {
+    "period": "05/2023 – 07/2023",
+    "start_year": 2023,
+    "end_year": 2023,
+    "title": "Advanced Linux Course",
+    "org": "Bit4ID srl - Linux Academy",
+    "role": "Teacher",
+    "summary": "Instructor for the Advanced Linux Course within the Linux Academy program.",
+    "link": "",
+    "tags": ["Linux", "Professional Training", "Teaching"]
+  },
+  {
+    "period": "10/2022 – 06/2023",
+    "start_year": 2022,
+    "end_year": 2023,
+    "title": "Python Course",
+    "org": "Assoservizi srl - Tuscany Region",
+    "role": "Teacher",
+    "summary": "Instructor of Python Course within the IFTS project 'CONNECTED - Automation Worker 4.0' (Project code 294772) funded by Tuscany Region.",
+    "link": "",
+    "tags": ["Python", "Automation", "Professional Training", "Teaching"]
+  },
+  {
+    "period": "02/2023 – 05/2023",
+    "start_year": 2023,
+    "end_year": 2023,
+    "title": "Advanced Python - Python Academy",
+    "org": "Bit4ID srl",
+    "role": "Teacher",
+    "summary": "Instructor of the Advanced Python Programming module within the Python Academy program.",
+    "link": "",
+    "tags": ["Python", "Professional Training", "Teaching"]
+  },
+  {
+    "period": "10/2020 – 06/2021",
+    "start_year": 2020,
+    "end_year": 2021,
+    "title": "Python Course",
+    "org": "Assoservizi srl - Tuscany Region",
+    "role": "Teacher",
+    "summary": "Instructor of Python Programming within the IFTS project 'SMART - Manufacturing Developer 4.0' (Project code 248006) funded by Tuscany Region.",
+    "link": "",
+    "tags": ["Python", "Manufacturing", "Professional Training", "Teaching"]
+  },
+  {
     "period": "2020",
     "start_year": 2020,
     "end_year": 2020,
