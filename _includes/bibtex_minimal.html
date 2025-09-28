@@ -1,0 +1,18 @@
+{%- assign e = include.entry -%}
+{%- comment -%} inferisci il tipo: inproceedings > article > misc {%- endcomment -%}
+{%- assign kind = 'misc' -%}
+{%- if e.booktitle %}{% assign kind = 'inproceedings' %}
+{%- elsif e.journal %}{% assign kind = 'article' %}{% endif -%}
+
+@{{ kind }}{ {{ e.key }},
+  author    = { {{ e.author }} },
+  title     = { {{ e.title }} },
+  year      = { {{ e.year }} }{% if e.journal %},
+  journal   = { {{ e.journal }} }{% endif %}{% if e.booktitle %},
+  booktitle = { {{ e.booktitle }} }{% endif %}{% if e.series and not e.journal %},
+  series    = { {{ e.series }} }{% endif %}{% if e.volume %},
+  volume    = { {{ e.volume }} }{% endif %}{% if e.number %},
+  number    = { {{ e.number }} }{% endif %}{% if e.pages %},
+  pages     = { {{ e.pages }} }{% endif %}{% if e.doi %},
+  doi       = { {{ e.doi }} }{% endif %}
+}

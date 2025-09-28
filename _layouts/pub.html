@@ -1,9 +1,6 @@
 ---
-layout: default
-title: ""
-header: false
+layout: single
 author_profile: false
-read_time: false
 ---
 
 {%- assign e = page.entry -%}
@@ -31,7 +28,7 @@ read_time: false
 
 <article class="pub-detail">
   <header>
-    <h1 class="page__title">{{ page.entry.title }}</h1>
+    <!--<h1 class="page__title">{{ page.entry.title }}</h1>-->
     <p class="page__meta">
       <span class="pub-badge pub-badge-{{ pub_class }}">{{ pub_badge }}</span>
       {{ page.entry.author }}
@@ -103,9 +100,9 @@ read_time: false
       <button class="btn btn-pub download-bib" data-key="{{ page.entry.key }}">Download .bib</button>
     </p>
 
-    <pre id="bib-{{ page.entry.key }}" class="bibtex" style="display:none">
-{{ page.entry | bibtex }}
-    </pre>
+<pre id="bib-{{ page.entry.key }}" class="bibtex" style="display:none">
+{% include bibtex_minimal.html entry=page.entry %}
+</pre>
   </section>
 
   <section>
