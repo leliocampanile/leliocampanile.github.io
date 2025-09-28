@@ -1,6 +1,7 @@
 ---
 layout: single
-title: false
+title: ""
+header: false
 author_profile: false
 read_time: false
 ---
@@ -71,7 +72,7 @@ read_time: false
 <section>
   <h2>Keywords</h2>
   <p>
-{%- assign kwlist = page.entry.keywords | split: ";" -%} {# o split: "," in base al tuo .bib #}
+{%- assign kwlist = page.entry.keywords | split: ";" -%}
 {%- for kw in kwlist -%}
   {%- assign k = kw | strip -%}
   {%- assign slug = k | slugify -%}
