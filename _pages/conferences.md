@@ -2,7 +2,7 @@
 layout: single
 title: "Conferences"
 permalink: /conferences/
-author_profile: false
+author_profile: true
 ---
 
 {%- assign items_raw = site.data.conferences -%}
