@@ -1,0 +1,123 @@
+[
+  {
+    "period": "2020",
+    "start_year": 2020,
+    "end_year": 2020,
+    "title": "Red Hat OpenShift for Developers",
+    "org": "BC Soft srl",
+    "role": "Instructor",
+    "summary": "Teacher of Red Hat OpenShift for Developers at BC Soft srl.",
+    "link": "",
+    "tags": ["OpenShift", "Containers", "DevOps", "Professional Training"]
+  },
+  {
+    "period": "2020",
+    "start_year": 2020,
+    "end_year": 2020,
+    "title": "Google Angular Programming",
+    "org": "Consorzio Clara",
+    "role": "Instructor",
+    "summary": "Teacher of Google Angular Programming at Consorzio Clara (Naples).",
+    "link": "",
+    "tags": ["Angular", "Web", "Frontend", "Professional Training"]
+  },
+  {
+    "period": "2019",
+    "start_year": 2019,
+    "end_year": 2019,
+    "title": "Advanced Java",
+    "org": "Gesan srl",
+    "role": "Instructor",
+    "summary": "Advanced Java Programming course (project “ICT TRAINING FOR DEVELOPMENT”), authorized by Campania Region.",
+    "link": "",
+    "tags": ["Java", "Backend", "Professional Training"]
+  },
+  {
+    "period": "2019",
+    "start_year": 2019,
+    "end_year": 2019,
+    "title": "Python Programming",
+    "org": "Consorzio Clara",
+    "role": "Instructor",
+    "summary": "Python Programming (course “Python Web Engineer”) at the training agency Consorzio Clara, Naples.",
+    "link": "",
+    "tags": ["Python", "Web", "Professional Training"]
+  },
+  {
+    "period": "2018",
+    "start_year": 2018,
+    "end_year": 2018,
+    "title": "Challenge Based Learning",
+    "org": "Istituto Tecnico Professionale Alfonso Casanova, Napoli",
+    "role": "Instructor",
+    "summary": "Teacher of the “Challenge Based Learning” methodology under a PON project.",
+    "link": "",
+    "tags": ["CBL", "Methodology", "PON", "Teacher Training"]
+  },
+  {
+    "period": "2018",
+    "start_year": 2018,
+    "end_year": 2018,
+    "title": "Arduino Platform Programming",
+    "org": "Liceo Scientifico F. Quercia (Marcianise, CE)",
+    "role": "Instructor",
+    "summary": "“Robotica con Arduino” – PON project (Arduino platform programming).",
+    "link": "",
+    "tags": ["Arduino", "Embedded", "Robotics", "PON", "Professional Training"]
+  },
+  {
+    "period": "2018",
+    "start_year": 2018,
+    "end_year": 2018,
+    "title": "Augmented Reality",
+    "org": "Liceo Scientifico F. Quercia (Marcianise, CE)",
+    "role": "Instructor",
+    "summary": "“Realtà Aumentata” – PON project (Augmented Reality).",
+    "link": "",
+    "tags": ["AR", "Augmented Reality", "PON", "Professional Training"]
+  },
+  {
+    "period": "2016",
+    "start_year": 2016,
+    "end_year": 2016,
+    "title": "Computer Science – Web Programming",
+    "org": "Nuovi Orizzonti (Aversa, CE)",
+    "role": "Instructor",
+    "summary": "Course “Web Designer”, authorized by Campania Region (Executive Decree no. 125 of 05/05/2015 and no. 110 of 30/11/2015).",
+    "link": "",
+    "tags": ["Web", "Programming", "Professional Training"]
+  },
+  {
+    "period": "2015–2019",
+    "start_year": 2015,
+    "end_year": 2019,
+    "title": "Apple iOS Programming – Swift",
+    "org": "Università della Campania “L. Vanvitelli” (in collaboration with Apple)",
+    "role": "Instructor",
+    "summary": "iOS Foundation Courses in collaboration with Apple at Università della Campania “L. Vanvitelli”.",
+    "link": "",
+    "tags": ["iOS", "Swift", "Apple", "Professional Training"]
+  },
+  {
+    "period": "2013",
+    "start_year": 2013,
+    "end_year": 2013,
+    "title": "Computer Science – Web Programming",
+    "org": "Nuovi Orizzonti (Aversa, CE)",
+    "role": "Instructor",
+    "summary": "Course “Tecnico della programmazione e dello sviluppo di siti internet e pagine web” (ID 3147), authorized by Campania Region (Executive Decree no. 117 of 13/09/2012).",
+    "link": "",
+    "tags": ["Web", "Programming", "Professional Training"]
+  },
+  {
+    "period": "2006",
+    "start_year": 2006,
+    "end_year": 2006,
+    "title": "Computer Science – ASP Programming, Databases and Multimedia Tools",
+    "org": "Selform srl",
+    "role": "Instructor",
+    "summary": "Classes delivered under the project “Grandi attrattori culturali – Reggia di Caserta”.",
+    "link": "",
+    "tags": ["ASP", "Databases", "Multimedia", "Professional Training"]
+  }
+]
