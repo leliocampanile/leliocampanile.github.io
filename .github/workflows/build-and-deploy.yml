@@ -37,7 +37,7 @@ jobs:
           # Cancella i file generati in precedenza (mantieni eventuali file manuali rinominandoli con .keep)
           find _keywords -maxdepth 1 -type f -name '*.md' -print -delete || true
 
-          ruby - <<'RUBY'
+          bundle exec ruby - <<'RUBY'
           require 'bibtex'
           require 'fileutils'
       
