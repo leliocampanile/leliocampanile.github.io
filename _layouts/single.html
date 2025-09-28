@@ -53,7 +53,7 @@ layout: default
       {% endunless %}
 
       {% if page.toc %}
-        {% include toc.html %}
+        {% include toc icon=page.toc_icon title=page.toc_label %}
       {% endif %}
       
       <section class="page__content" itemprop="text">
