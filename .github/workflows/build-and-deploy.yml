@@ -34,13 +34,61 @@ jobs:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --trace
 
-      # 👇 DEBUG: verifica che le pagine di dettaglio siano state generate
-      - name: List generated detail pages
+      - name: Generate keyword pages from .bib
         run: |
-          echo "Listing _site/bibliography:"
-          ls -la _site/bibliography || true
-          echo "Listing _site/debug:"
-          ls -la _site/debug || true
+          mkdir -p _keywords
+          # Cancella i file generati in precedenza (mantieni eventuali file manuali rinominandoli con .keep)
+          find _keywords -maxdepth 1 -type f -name '*.md' -print -delete || true
+
+          ruby - <<'RUBY'
+          require 'bibtex'
+          require 'fileutils'
+      
+          SRC_DIR = '_bibliography'
+          BIBFILE = ENV.fetch('BIBFILE', 'papers.bib') # cambia se hai un nome diverso
+          PATH    = File.join(SRC_DIR, BIBFILE)
+      
+          def slugify(str)
+            s = str.downcase.strip
+            s = s.gsub(/[^\p{Alnum}]+/u, '-') # caratteri non alfanumerici → '-'
+            s.gsub(/^-+|-+$/, '')             # trim '-'
+          end
+      
+          abort("BibTeX file not found: #{PATH}") unless File.exist?(PATH)
+      
+          bib = BibTeX.open(PATH)
+      
+          # Raccogli sia 'keywords' sia 'author_keywords'; separatori ';' o ','
+          counts = Hash.new(0)
+          bib.each do |e|
+            next unless e.respond_to?(:[])
+            raw = [e[:keywords], e[:author_keywords]].compact.map(&:to_s).join(',')
+            next if raw.strip.empty?
+            raw.split(/[;,]/).each do |k|
+              k = k.strip
+              next if k.empty?
+              counts[k] += 1
+            end
+          end
+      
+          FileUtils.mkdir_p('_keywords')
+      
+          counts.keys.sort.each do |kw|
+            slug = slugify(kw)
+            path = File.join('_keywords', "#{slug}.md")
+            File.write(path, <<~MD)
+            ---
+            layout: keyword
+            title: "Publications tagged with #{kw}"
+            keyword: #{kw}
+            ---
+      
+            <!-- Generated automatically from papers.bib -->
+            MD
+          end
+
+          puts "Generated #{counts.size} keyword pages in _keywords/"
+          RUBY
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
