@@ -1,0 +1,62 @@
+[
+  {
+    "period": "2010–2011",
+    "start_year": 2010,
+    "end_year": 2011,
+    "title": "SUN High Speed Networks",
+    "org": "Università della Campania “L. Vanvitelli” (ex SUN)",
+    "role": "Team member",
+    "summary": "Dorsale in fibra tra sedi universitarie distribuite in Campania.",
+    "tags": ["Networking", "Backbone", "Fiber"]
+  },
+  {
+    "period": "2008–2009",
+    "start_year": 2008,
+    "end_year": 2009,
+    "title": "WIFI SUN",
+    "org": "Università della Campania “L. Vanvitelli” (ex SUN)",
+    "role": "Team member",
+    "summary": "Rete Wi-Fi per studenti su oltre 10 sedi.",
+    "tags": ["Wi-Fi", "Campus", "Networking"]
+  },
+  {
+    "period": "2013–2015",
+    "start_year": 2013,
+    "end_year": 2015,
+    "title": "RIMIC",
+    "org": "Rete di Interconnessione Multiservizio Interuniversitaria Campana",
+    "role": "Working team",
+    "summary": "Servizi di rete regionali su fibra (WDM) a supporto di ricerca e didattica.",
+    "tags": ["WDM", "Backbone", "Campus"]
+  },
+  {
+    "period": "2013",
+    "start_year": 2013,
+    "end_year": 2013,
+    "title": "University Datacenter (Caserta)",
+    "org": "Università della Campania “L. Vanvitelli”",
+    "role": "Design team",
+    "summary": "Progettazione del nuovo datacenter di ateneo.",
+    "tags": ["Datacenter", "Infrastructure"]
+  },
+  {
+    "period": "2013",
+    "start_year": 2013,
+    "end_year": 2013,
+    "title": "University Website",
+    "org": "Università della Campania “L. Vanvitelli”",
+    "role": "Working group",
+    "summary": "Redesign del sito istituzionale.",
+    "tags": ["Web", "Institutional"]
+  },
+  {
+    "period": "2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "title": "Progettista reti scolastiche (PON)",
+    "org": "Liceo Statale Ischia (NA); 36° Circolo Didattico Napoli",
+    "role": "Progettista",
+    "summary": "Cablaggio strutturato e sicuro per plessi scolastici.",
+    "tags": ["School", "LAN", "Security"]
+  }
+]

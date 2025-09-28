@@ -1,0 +1,50 @@
+[
+  {
+    "period": "2024–ongoing",
+    "start_year": 2024,
+    "end_year": null,
+    "title": "GRIN-D (PE GRINS) – Low-carbon policies & socio-economic sustainability",
+    "org": "Università della Campania “L. Vanvitelli”",
+    "program": "PNRR – NextGenerationEU",
+    "role": "WP1 Lead (9 mesi)",
+    "summary": "Coordinamento scientifico sul WP1 per metriche e policy low-carbon.",
+    "links": [
+      { "label": "Project", "url": "#" }
+    ],
+    "tags": ["PNRR", "Sustainability", "Policy", "Metrics"]
+  },
+  {
+    "period": "2022–ongoing",
+    "start_year": 2022,
+    "end_year": null,
+    "title": "Meditech CC 4.0 – Radiometric camera auto-compensation (ML)",
+    "org": "Centro di Competenza Meditech",
+    "partner": "GAM Engineering SRL",
+    "role": "Responsabile scientifico convenzione",
+    "summary": "Sistema TRL7 per compensazione automatica di telecamere radiometriche con ML.",
+    "links": [],
+    "tags": ["ML", "Computer Vision", "Industry 4.0"]
+  },
+  {
+    "period": "2022–ongoing",
+    "start_year": 2022,
+    "end_year": null,
+    "title": "heriVolo s.r.l. – Academic spin-off",
+    "org": "Università della Campania “L. Vanvitelli”",
+    "role": "Founder & lead",
+    "summary": "Deep augmented holography, NLP e contextual intelligence. Premio ricerca industriale (20k€).",
+    "links": [],
+    "tags": ["Spin-off", "NLP", "Holography", "AI"]
+  },
+  {
+    "period": "2021–ongoing",
+    "start_year": 2021,
+    "end_year": null,
+    "title": "DIGIT-Aversa – Smart City",
+    "org": "Comune di Aversa & CNR-ISMed",
+    "role": "Collaboratore scientifico",
+    "summary": "Progetti ICT e dati territoriali per servizi urbani intelligenti.",
+    "links": [],
+    "tags": ["Smart City", "Data", "Public Sector"]
+  }
+]
