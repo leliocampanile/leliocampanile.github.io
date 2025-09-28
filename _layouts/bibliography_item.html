@@ -1,7 +1,24 @@
 {%- comment -%} URL robusto alla pagina details (rispetta details_permalink/permalink globali) {%- endcomment -%}
 {%- capture detail_url -%}{% details_link entry.key %}{%- endcapture -%}
 
+{%- comment -%} Badge: prova dal type, poi fallback journal/booktitle {%- endcomment -%}
+{%- assign raw_kind = e.type | default: '' | downcase | strip -%}
+{%- assign pub_badge = nil -%}
+{%- if raw_kind contains 'article' -%}{% assign pub_badge = 'Journal' %}
+{%- elsif raw_kind contains 'conference' -%}{% assign pub_badge = 'Conference' %}
+{%- elsif raw_kind contains 'book chapter' -%}{% assign pub_badge = 'Book Chapter' %}
+{%- else %}{% assign pub_badge = 'Other' %}
+{%- endif -%}
+{%- if pub_badge == nil -%}
+  {%- if e.journal %}{% assign pub_badge = 'Journal' %}
+  {%- elsif e.booktitle %}{% assign pub_badge = 'Conference' %}
+  {%- else %}{% assign pub_badge = 'Other' %}{% endif -%}
+{%- endif -%}
+{%- assign pub_class = pub_badge | downcase | replace: ' ', '-' -%}
+
+
 <div class="pub-item">
+  <span class="pub-badge pub-badge-{{ pub_class }}">{{ pub_badge }}</span>
   <!-- Titolo linkato alla pagina di dettaglio -->
   <div class="pub-title">
     <a href="{{ detail_url }}">{{ entry.title }}</a>

@@ -218,5 +218,16 @@
     "summary": "Co-organized and chaired the workshop Privacy in the Cloud/Edge/IoT World (collocated with ICCSA 2023).",
     "link": "",
     "tags": ["Conference", "Chair", "ICCSA", "Privacy", "Workshop"]
-  }
+  },
+    {
+    "period": "04/2025",
+    "start_year": 2025,
+    "end_year": 2025,
+    "title": "AINA 2025 — Speaker",
+    "org": "AINA 2025, Barcellona (Spain)",
+    "role": "Speaker",
+    "summary": "Presented the paper Edge-Cloud Distributed Approaches to Text Authorship Analysis: A Feasibility Study",
+    "link": "",
+    "tags": ["Conference", "Speaker", "AINA", "Privacy", "NLP"]
+  },
 ]
