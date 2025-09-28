@@ -14,7 +14,10 @@ main:
 
   - title: "Conferences"
     url: /conferences/
-            
+
+  - title: "Collaborations"
+    url: /collaborations/
+
   - title: "Blog Posts"
     url: /year-archive/
     

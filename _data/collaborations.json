@@ -1,0 +1,105 @@
+[
+  {
+    "period": "2018 – present",
+    "start_year": 2018,
+    "end_year": 0,
+    "role": "Research Collaboration",
+    "title": "Data & Computer Science (Statistics and Informatics) research group",
+    "org": "Department of Mathematics and Physics, University of Campania “L. Vanvitelli”",
+    "people": ["Mauro Iacono", "Stefano Marrone", "Fiammetta Marulli"],
+    "summary": "Ongoing collaboration within the department’s research group with joint work on modeling, performance, privacy and security, and AI/ML for CPS and complex systems.",
+    "outputs": [],
+    "tags": ["Modeling", "Performance", "Privacy", "Security", "AI/ML", "CPS"]
+  },
+  {
+    "period": "2018 – present",
+    "start_year": 2018,
+    "end_year": 0,
+    "role": "Research Collaboration",
+    "title": "Performance modeling and simulation",
+    "org": "DEIB, Politecnico di Milano",
+    "people": ["Marco Gribaudo"],
+    "summary": "Collaboration on quantitative modeling, simulation, and performance evaluation with multiple joint publications.",
+    "outputs": [],
+    "tags": ["Performance", "Modeling", "Simulation"]
+  },
+  {
+    "period": "2021 – present",
+    "start_year": 2021,
+    "end_year": 0,
+    "role": "Research Collaboration",
+    "title": "Privacy, smart roads, blockchain, and liability insurance",
+    "org": "George Mason University",
+    "people": ["Alex H. Levis"],
+    "summary": "Collaboration on the intersection of privacy regulations, smart roads and blockchain with impacts on liability and insurance.",
+    "outputs": [
+      "Campanile, L., Iacono, M., Levis, A.H., Marulli, F., Mastroianni, M. (2021) IEEE Security & Privacy."
+    ],
+    "tags": ["Privacy", "Blockchain", "Smart Roads", "Policy"]
+  },
+  {
+    "period": "Apr 2021 – Jun 2021",
+    "start_year": 2021,
+    "end_year": 2021,
+    "role": "Research Collaboration",
+    "title": "AI techniques for energy optimization in WSN/IoT",
+    "org": "Institute of Computer Science, Cracow University of Technology",
+    "people": ["Agnieszka Jakóbik"],
+    "summary": "Short-term collaboration on AI methods to optimize energy consumption in WSN and IoT infrastructures.",
+    "outputs": [],
+    "tags": ["AI", "WSN", "IoT", "Energy Optimization"]
+  },
+  {
+    "period": "2021 – present",
+    "start_year": 2021,
+    "end_year": 0,
+    "role": "Research Collaboration",
+    "title": "Hybrid modeling for process engineering",
+    "org": "Department of Chemical, Materials and Production Engineering",
+    "people": ["Francesco Di Natale"],
+    "summary": "Collaboration on Machine Learning and Deep Learning for hybrid models in chemical/process engineering.",
+    "outputs": [
+      "Di Bonito, L.P., Campanile, L., Iacono, M., Di Natale, F. – AI applied to Chemical Engineering (GRICU 2022).",
+      "Campanile, L., Di Bonito, L.P., Gribaudo, M., Iacono, M. – DSL for AI applications in process engineering (EAI VALUETOOLS 2022)."
+    ],
+    "tags": ["ML", "DL", "Hybrid Models", "Process Engineering"]
+  },
+  {
+    "period": "2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "role": "Research Collaboration",
+    "title": "Quantitative models for performance assessment",
+    "org": "University of Eastern Piedmont",
+    "people": ["Andrea Bobbio"],
+    "summary": "Collaboration on quantitative models for performance assessment with joint publication.",
+    "outputs": [
+      "Bobbio, A., Campanile, L., Gribaudo, M., Iacono, M., Marulli, F., Mastroianni, M. (2022) Neural Computing and Applications."
+    ],
+    "tags": ["Quantitative Models", "Performance"]
+  },
+  {
+    "period": "Jun 2022 – Dec 2022",
+    "start_year": 2022,
+    "end_year": 2022,
+    "role": "EU Project Collaboration",
+    "title": "H2020 Shift2Rail – PERFORMINGRAIL (Deliverable D2.3)",
+    "org": "Consortium: UoB, TU Delft, Université Gustave Eiffel, CINI, Mälardalen University",
+    "people": [],
+    "summary": "Participation to the consortium activities for the authoring of Deliverable D2.3 on formal verification and model composition for moving-block systems.",
+    "outputs": ["Project deliverable D2.3 (Shift2Rail PERFORMINGRAIL)"],
+    "tags": ["H2020", "Railways", "Formal Methods", "Moving Block"]
+  },
+  {
+    "period": "Feb 2023 – present",
+    "start_year": 2023,
+    "end_year": 0,
+    "role": "Working Group Member",
+    "title": "DIGIT-Aversa scientific collaboration",
+    "org": "Municipality of Aversa · CNR-ISMed",
+    "people": [],
+    "summary": "Member of the working group under the collaboration agreement between the Municipality of Aversa and CNR-ISMed for research activities within the DIGIT-Aversa project.",
+    "outputs": [],
+    "tags": ["Smart City", "Digital Transformation", "Public Administration"]
+  }
+]

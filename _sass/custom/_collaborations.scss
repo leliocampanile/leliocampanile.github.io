@@ -1,0 +1,53 @@
+/* === Collaborations (riuso palette Conferences) === */
+
+.coll-h2 {
+  margin: 1.6rem 0 .6rem;
+  font-size: 1.25rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: .2rem;
+}
+
+.coll-list { list-style: none; margin: 0; padding: 0; }
+.coll-item {
+  background: #fafafa;
+  border-left: 3px solid #6c757d;
+  border-radius: 6px;
+  margin: 1rem 0;
+  padding: 0.6rem 0.9rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.coll-header { margin-bottom: .25rem; display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap; }
+.coll-title { font-weight: 600; }
+
+.coll-meta { color: #555; font-size: .92rem; margin-bottom: .35rem; }
+.coll-period { font-weight: 500; color: #444; }
+.coll-sep { margin: 0 .35rem; color: #bbb; }
+.coll-org, .coll-people { color: #555; }
+
+.coll-summary { font-size: .95rem; line-height: 1.45; }
+
+.coll-outputs { margin-top: .35rem; }
+.coll-outputs-list { margin: .25rem 0 0 .9rem; }
+
+.coll-badge {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  padding: .15rem .5rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  background: #eaeaea;
+  color: #444;
+}
+.coll-badge-collab { background:#e7f1ff; color:#0b63ce; }
+.coll-badge-eu     { background:#f3eaff; color:#5a26c1; }
+.coll-badge-wgm    { background:#eaf8ef; color:#1e7a3c; }
+.coll-badge-local  { background:#fff2e6; color:#c25a00; }
+.coll-badge-other  { background:#eee; color:#555; }
+
+.coll-item.coll-role-collab { border-left-color:#0b63ce; }
+.coll-item.coll-role-eu     { border-left-color:#5a26c1; }
+.coll-item.coll-role-wgm    { border-left-color:#1e7a3c; }
+.coll-item.coll-role-local  { border-left-color:#c25a00; }
