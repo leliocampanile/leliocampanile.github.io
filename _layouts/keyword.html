@@ -1,0 +1,8 @@
+---
+layout: single
+---
+<h1>Publications tagged with "{{ page.keyword }}"</h1>
+
+{% bibliography --query @*[keywords~={{ page.keyword }}] %}
+
+<p><a href="{{ '/publications/' | relative_url }}">← Back to all publications</a></p>

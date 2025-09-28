@@ -71,35 +71,12 @@ read_time: false
 <section>
   <h2>Keywords</h2>
   <p>
-    {%- assign kwlist = page.entry.keywords | split: ";" -%}
-
-    {%- comment -%} Parametri Scholar dal config {%- endcomment -%}
-    {%- assign _lang = site.google_scholar.scholar_lang | default: "en" -%}
-    {%- assign _uid  = site.google_scholar.scholar_user | default: nil -%}
-    {%- assign _author_name = site.google_scholar.author_name | default: "Lelio Campanile" -%}
-    {%- assign _author_q = _author_name | prepend: 'author:"' | append: '"' | uri_escape -%}
-
-    {%- for kw in kwlist -%}
-      {%- assign k = kw | strip -%}
-      {%- assign kwslug = k | slugify -%}
-      {%- assign q = k | uri_escape -%}
-
-      {%- comment -%} Link interno (se/quando avrai la pagina per keyword) {%- endcomment -%}
-      <a class="pub-tag" href="{{ '/keyword/' | append: kwslug | relative_url }}">{{ k }}</a>
-
-      {%- comment -%} Link esterno a Google Scholar (priorità: user id -> nome) {%- endcomment -%}
-      {% if _uid %}
-        <a class="pub-tag ext"
-           href="https://scholar.google.com/citations?view_op=search_works&hl={{ _lang }}&user={{ _uid }}&q={{ q }}"
-           target="_blank" rel="noopener"
-           aria-label="Search '{{ k }}' in my Google Scholar profile">GS</a>
-      {% else %}
-        <a class="pub-tag ext"
-           href="https://scholar.google.com/scholar?hl={{ _lang }}&q={{ q }}+{{ _author_q }}"
-           target="_blank" rel="noopener"
-           aria-label="Search '{{ k }}' with author filter on Google Scholar">GS</a>
-      {% endif %}
-    {%- endfor -%}
+{%- assign kwlist = page.entry.keywords | split: ";" -%} {# o split: "," in base al tuo .bib #}
+{%- for kw in kwlist -%}
+  {%- assign k = kw | strip -%}
+  {%- assign slug = k | slugify -%}
+  <a class="pub-tag" href="{{ '/keywords/' | append: slug | relative_url }}">{{ k }}</a>
+{%- endfor -%}
   </p>
 </section>
 {% endif %}

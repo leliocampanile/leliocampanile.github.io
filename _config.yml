@@ -95,12 +95,12 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "lelio.campanile"
+  #facebook         : "lelio.campanile"
   foursquare       :
   github           : "leliocampanile"
   google_plus      :
   keybase          :
-  instagram        : "leliocampanile"
+  #instagram        : "leliocampanile"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "leliocampanile"
@@ -109,7 +109,7 @@ author:
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
-  tumblr           : "leliocampanile"
+  #tumblr           : "leliocampanile"
   twitter          : "lelioc"
   vine             :
   weibo            :
@@ -188,6 +188,10 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  keywords:
+    output: true
+    permalink: /:collection/:path/
+
 
 
 # Defaults
