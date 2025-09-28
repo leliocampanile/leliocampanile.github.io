@@ -304,6 +304,9 @@ scholar:
     - editor
     - month_numeric
     - type
+  bibtex_filters:
+    - latex           # evita trasformazioni 'creative'
+  bibtex_quotes: ['{', '}']
   locale: en
   sort_by: year
   order: descending
