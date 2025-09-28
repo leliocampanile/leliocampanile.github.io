@@ -3,7 +3,6 @@ title: Thesis Topics
 permalink: /thesis/
 layout: single
 author_profile: true
-toc: true
 ---
 
 ## Available Thesis Topics
