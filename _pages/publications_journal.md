@@ -12,5 +12,4 @@ Casi coperti:
 - Campo personalizzato type contenente "Article" (se presente)
 {% endcomment %}
 
-{% bibliography --query @article --template bibliography_item --details %}
 {% bibliography --query @*[type~=Article] --template bibliography_item --details %}

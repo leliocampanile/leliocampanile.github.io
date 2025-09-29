@@ -54,7 +54,7 @@ authors.each do |slug, data|
   body = <<~MD
   # Publications by "#{name}"
 
-  {% bibliography --group_by year --group_order descending --template bibliography_item --details --query @*[author~="{{ page.author_query }}"] %}
+  {% bibliography --group_by year --group_order descending --template bibliography_item --details --query @*[author=/{{ page.author_query }}/] %}
 
   <p><a href="{{ '/publications/' | relative_url }}">← Back to all publications</a></p>
   MD
