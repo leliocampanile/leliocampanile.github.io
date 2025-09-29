@@ -86,7 +86,12 @@ jobs:
 
           puts "Generated #{counts.size} keyword pages in _keywords/"
           RUBY
-          
+
+      - name: Generate author pages
+        run: |
+          gem install bibtex-ruby --no-document
+          ruby .github/scripts/generate_authors.rb    
+            
       - name: Build site
         env:
           JEKYLL_ENV: production
