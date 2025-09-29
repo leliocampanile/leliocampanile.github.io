@@ -188,6 +188,10 @@ collections:
   keywords:
     output: true
     permalink: /:collection/:path/
+  authors:
+    output: true
+    permalink: /:collection/:path/
+  
 
 
 

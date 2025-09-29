@@ -26,13 +26,31 @@ author_profile: false
 {%- comment %} Classe CSS coerente (kebab-case) {% endcomment -%}
 {%- assign pub_class = pub_badge | downcase | replace: ' ', '-' -%}
 
+{%- comment -%} Autori linkati alla collection /authors/ {%- endcomment -%}
+{%- assign linked_authors = '' -%}
+{%- if e.author_array and e.author_array.size > 0 -%}
+  {%- for a in e.author_array -%}
+    {%- assign fullname = a.first | append: ' ' | append: a.last | strip -%}
+    {%- assign aslug = fullname | slugify -%}
+    {%- capture one -%}<a href="{{ '/authors/' | append: aslug | relative_url }}">{{ fullname }}</a>{%- endcapture -%}
+    {%- if forloop.first -%}
+      {%- assign linked_authors = one -%}
+    {%- else -%}
+      {%- assign linked_authors = linked_authors | append: ', ' | append: one -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- assign linked_authors = e.author -%}
+{%- endif -%}
+
 <article class="pub-detail">
+
   <header>
-    <!--<h1 class="page__title">{{ page.entry.title }}</h1>-->
+    <!--<h1 class="page__title">{{ e.title }}</h1>-->
     <p class="page__meta">
       <span class="pub-badge pub-badge-{{ pub_class }}">{{ pub_badge }}</span>
-      {{ page.entry.author }}
-      {%- if page.entry.year %} — {{ page.entry.year }}{% endif -%}
+      <span class="pub-authors">{{ linked_authors }}</span>
+      {%- if e.year %} — {{ e.year }}{% endif -%}
       {%- if venue %} · <em>{{ venue }}</em>{% endif -%}
     </p>
   </header>
@@ -125,7 +143,7 @@ Compila campi base per Rich Results. Se mancano alcuni campi, vengono omessi.
   {% if page.entry.author %}"author": {{ page.entry.author | jsonify }},{% endif %}
   {% if page.entry.abstract %}"abstract": {{ page.entry.abstract | strip_newlines | jsonify }},{% endif %}
   {% if page.entry.year %}"datePublished": "{{ page.entry.year }}",{% endif %}
-  {% if page.entry.doi %}"identifier": "https://doi.org/{{ entry.doi }}",{% endif %}
+  {% if page.entry.doi %}"identifier": "https://doi.org/{{ page.entry.doi }}",{% endif %}
   {% if venue %}"isPartOf": {"name": {{ venue | jsonify }}},{% endif %}
   {% if page.entry.url %}"url": {{ page.entry.url | jsonify }},{% endif %}
   "publisher": {{ page.entry.publisher | default: "Unknown" | jsonify }}
