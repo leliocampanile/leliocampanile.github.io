@@ -57,7 +57,7 @@ authors.each do |name|
       <<~MD
       # Publications by “#{name}”
 
-      {% raw %}{% bibliography --query @*[author~=#{name}] --template bibliography_item --details %}{% endraw %}
+      {% bibliography --query @*[author~=#{name}] --template bibliography_item --details %}
 
       <p><a href="{{ '/publications/' | relative_url }}">← Back to all publications</a></p>
       MD
