@@ -6,8 +6,6 @@ author_profile: true
 toc: false
 ---
 
-# Publications by “{{ page.author }}”
 
-{% bibliography --query @*[author~={{ page.author | replace: '"','\"' }}] --template bibliography_item --details %}
-
+{% bibliography --query @*[author~="#{name}"] --template bibliography_item --details %}
 <p><a href="{{ '/publications/' | relative_url }}">← Back to all publications</a></p>

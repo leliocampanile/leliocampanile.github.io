@@ -1,69 +1,65 @@
 #!/usr/bin/env ruby
-# Genera una pagina in _authors/ per ciascun autore presente nel .bib
 require 'fileutils'
 require 'bibtex'
 
-BIB_PATH   = ENV['BIB_PATH']   || '_bibliography/papers.bib'
-OUT_DIR    = ENV['OUT_DIR']    || '_authors'
-TEMPLATE   = ENV['TEMPLATE']   || nil  # opzionale: se vuoi usare un file sorgente
+BIB_PATH = ENV['BIB_PATH'] || '_bibliography/papers.bib'
+OUT_DIR  = ENV['OUT_DIR']  || '_authors'
 
 abort "Missing #{BIB_PATH}" unless File.exist?(BIB_PATH)
+FileUtils.mkdir_p(OUT_DIR)
 
-# slugify simile a Liquid 'slugify' default
 def slugify(str)
   str.to_s.downcase
-     .gsub(/[^\p{Alnum}\s-]/u, '')  # rimuovi tutto tranne alnum/space/-
-     .gsub(/\s+/, '-')               # spazi -> -
-     .gsub(/-+/, '-')                # collapse -
-     .gsub(/^-|-$/, '')              # trim -
+     .gsub(/[^\p{Alnum}\s-]/u, '')
+     .gsub(/\s+/, '-')
+     .gsub(/-+/, '-')
+     .gsub(/^-|-$/, '')
 end
 
 bib = BibTeX.open(BIB_PATH)
 
-authors = []
+# Mappa: slug -> { author: "First von Last", query: "von last" }
+authors = {}
+
 bib.each do |e|
   next unless e.respond_to?(:author) && e.author
-  e.author.each do |person|
-    full = [person.first, person.von, person.last, person.jr].compact.join(' ').gsub(/\s+/, ' ').strip
-    authors << full unless full.empty?
+  e.author.each do |p|
+    first = [p.first].compact.join(' ').strip
+    # token di ricerca: "von last" (es. "Di Bonito")
+    query = [p.von, p.last].compact.join(' ').gsub(/\s+/, ' ').strip
+    display = [first, p.von, p.last, p.jr].compact.join(' ').gsub(/\s+/, ' ').strip
+    next if display.empty?
+
+    slug = slugify(display)
+    authors[slug] ||= { 'author' => display, 'query' => query }
   end
 end
 
-authors = authors.uniq.sort
-FileUtils.mkdir_p(OUT_DIR)
-
-authors.each do |name|
-  slug = slugify(name)
-  path = File.join(OUT_DIR, "#{slug}.md")
+authors.each do |slug, data|
+  name  = data['author']
+  query = data['query'].empty? ? name.split.last : data['query'] # fallback: ultimo token
 
   front = <<~YAML
   ---
   layout: single
   title: "Publications by #{name}"
-  # Essendo in _authors/ questa pagina appartiene alla collection "authors"
-  # Il permalink finale seguirà /:collection/:path/ => /authors/#{slug}/
   author: "#{name}"
+  author_query: "#{query}"
   author_profile: true
   toc: false
+  permalink: /authors/#{slug}/
   ---
   YAML
 
-  body =
-    if TEMPLATE && File.exist?(TEMPLATE)
-      # Se vuoi usare un template esterno, rimpiazza placeholder {{AUTHOR_NAME}}
-      File.read(TEMPLATE).gsub('{{AUTHOR_NAME}}', name)
-    else
-      # Template inline: filtra per autore con jekyll-scholar
-      <<~MD
-      # Publications by “#{name}”
+  body = <<~MD
+  # Publications by "#{name}"
 
-      {% bibliography --query @*[author~=#{name}] --template bibliography_item --details %}
+  {% bibliography --group_by year --group_order descending --template bibliography_item --details --query @*[author~="{{ page.author_query }}"] %}
 
-      <p><a href="{{ '/publications/' | relative_url }}">← Back to all publications</a></p>
-      MD
-    end
+  <p><a href="{{ '/publications/' | relative_url }}">← Back to all publications</a></p>
+  MD
 
-  File.write(path, front + "\n" + body)
+  File.write(File.join(OUT_DIR, "#{slug}.md"), front + "\n" + body)
 end
 
 puts "Generated #{authors.size} author pages in #{OUT_DIR}/"
