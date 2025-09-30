@@ -6,17 +6,11 @@ author_profile: false
 toc: false
 ---
 
-## Test 1 — regex semplice (cognome con particella)
 
-**Query:** `@*[author=Di Bonito]`
+# Test 3: Con autore (sostituisci COGNOME)
+{% bibliography   --group_by year --group_order descending --template bibliography_item  --query  @*[author~=Lotito] %}
 
-{% bibliography --group_by year --group_order descending --template bibliography_item --details --query @*[author=Di Bonito] %}
-
----
-
-## Test 2 — regex semplice (cognome “Balzanella”)
-
-**Query:** `@*[author=Balzanella]`
-
-{% bibliography --group_by year --group_order descending --template bibliography_item --details --query @*[author=Balzanella] %}
+# Test 4: Count
+Totale voci: {% bibliography_count %}
+Con filtro: {% bibliography_count --query @*[author~=Lotito] %}
 

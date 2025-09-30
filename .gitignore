@@ -1,2 +1,10 @@
 _site/
+vendor/
+_keywords/
+_authors/
+.bundle/
+.sass-cache/
+.jekyll-cache/
+.DS_Store
+.jekyll-metadata
 

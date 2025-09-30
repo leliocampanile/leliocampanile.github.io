@@ -3,9 +3,10 @@
 
 require "bibtex"
 require "fileutils"
+require "json"  # <— aggiungi
 
 SRC_DIR = "_bibliography"
-BIBFILE = ENV.fetch("BIBFILE", "papers.bib") # override con env se vuoi
+BIBFILE = ENV.fetch("BIBFILE", "papers.bib")
 PATH    = File.join(SRC_DIR, BIBFILE)
 OUT_DIR = "_keywords"
 
@@ -15,11 +16,13 @@ def slugify(str)
   s.gsub(/^-+|-+$/, "")
 end
 
+# helper per front matter YAML-safe
+def y(str) JSON.dump(str.to_s) end   # restituisce una stringa tra doppi apici con escape corretto
+
 abort("BibTeX file not found: #{PATH}") unless File.exist?(PATH)
 
 bib = BibTeX.open(PATH)
 
-# Conta keyword da 'keywords' e 'author_keywords'; separatori ';' o ','.
 counts = Hash.new(0)
 bib.each do |e|
   next unless e.respond_to?(:[])
@@ -29,18 +32,18 @@ bib.each do |e|
 end
 
 FileUtils.mkdir_p(OUT_DIR)
-
-# Pulisci i .md generati in precedenza (lascia eventuali file manuali .keep)
 Dir.glob(File.join(OUT_DIR, "*.md")).each { |f| File.delete(f) }
 
 counts.keys.sort.each do |kw|
   slug = slugify(kw)
   path = File.join(OUT_DIR, "#{slug}.md")
+  title = "Publications tagged with #{kw}"
+
   File.write(path, <<~MD)
     ---
     layout: keyword
-    title: "Publications tagged with #{kw}"
-    keyword: #{kw}
+    title: #{y(title)}
+    keyword: #{y(kw)}
     permalink: /keywords/#{slug}/
     ---
 
