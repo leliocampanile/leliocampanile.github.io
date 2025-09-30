@@ -6,9 +6,17 @@ author_profile: false
 toc: false
 ---
 
+## Test 1 — regex semplice (cognome con particella)
 
-## Balzanella — contains (tilde)
+**Query:** `@*[author=Di Bonito]`
 
-{% bibliography --query '@*[author~=Balzanella]' %}
+{% bibliography --group_by year --group_order descending --template bibliography_item --details --query @*[author=Di Bonito] %}
 
+---
+
+## Test 2 — regex semplice (cognome “Balzanella”)
+
+**Query:** `@*[author=Balzanella]`
+
+{% bibliography --group_by year --group_order descending --template bibliography_item --details --query @*[author=Balzanella] %}
 
