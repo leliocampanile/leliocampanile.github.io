@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,8 +30,13 @@ jobs:
           bundler-cache: true
       - name: Install dependencies
         run: bundle install --jobs 4
-
       
+      - name: Clean keywords/authors
+        run: |
+          rm -rf _keywords/* _authors/*
+          mkdir -p _keywords _authors
+
+            
       - name: Generate keywords pages
         run: |
           gem install bibtex-ruby --no-document
@@ -44,7 +50,20 @@ jobs:
       - name: Build site
         env:
           JEKYLL_ENV: production
-        run: bundle exec jekyll build --trace --verbose
+        run:  |
+          set -o pipefail
+          bundle exec jekyll build --verbose --profile --trace 2>&1 | tee build.log
+
+      - name: Show _site stats
+        run: |
+          echo "Files count:" $(find _site -type f | wc -l)
+          du -sh _site || true
+
+      - name: Upload build log
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-build-log
+          path: build.log
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
