@@ -47,7 +47,7 @@ counts.keys.sort.each do |kw|
     permalink: /keywords/#{slug}/
     ---
 
-    {% bibliography --group_by year --group_order descending --template bibliography_item --details --query "@*[keywords~=#{kw}]" %}
+    {% bibliography --group_by year --group_order descending --template bibliography_item --query "@*[keywords~=#{kw}]" %}
 
     <p><a href="{{ '/publications/' | relative_url }}">← Back to all publications</a></p>
   MD
