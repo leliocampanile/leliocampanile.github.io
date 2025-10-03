@@ -87,7 +87,7 @@ author_profile: false
 <section>
   <h2>Keywords</h2>
   <p>
-{%- assign kwlist = page.entry.keywords | split: ";" -%}
+{%- assign kwlist = page.entry.keywords  | replace: ';', ',' | split: "," -%}
 {%- for kw in kwlist -%}
   {%- assign k = kw | strip -%}
   {%- assign slug = k | slugify -%}

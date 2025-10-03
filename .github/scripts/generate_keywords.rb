@@ -26,9 +26,16 @@ bib = BibTeX.open(PATH)
 counts = Hash.new(0)
 bib.each do |e|
   next unless e.respond_to?(:[])
-  raw = [e[:keywords], e[:author_keywords]].compact.map(&:to_s).join(",")
+
+  # prendi solo il campo 'keywords'
+  raw = e[:keywords].to_s
   next if raw.strip.empty?
-  raw.split(/[;,]/).map(&:strip).reject(&:empty?).each { |k| counts[k] += 1 }
+
+  raw.split(/[;,]/)
+     .map { |k| k.strip }
+     .reject(&:empty?)
+     .uniq
+     .each { |k| counts[k] += 1 }
 end
 
 FileUtils.mkdir_p(OUT_DIR)
