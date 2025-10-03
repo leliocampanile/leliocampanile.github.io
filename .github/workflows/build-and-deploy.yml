@@ -39,11 +39,11 @@ jobs:
             
       - name: Generate keywords pages
         run: |
-          ruby .github/scripts/generate_keywords.rb  
+          bundle exec ruby .github/scripts/generate_keywords.rb  
 
       - name: Generate author pages
         run: |
-          ruby .github/scripts/generate_authors.rb    
+          bundle exec ruby .github/scripts/generate_authors.rb    
             
       - name: Build site
         env:
