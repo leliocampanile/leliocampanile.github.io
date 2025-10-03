@@ -42,14 +42,11 @@ counts.keys.sort.each do |kw|
   File.write(path, <<~MD)
     ---
     layout: keyword
-    title: #{y(title)}
-    keyword: #{y(kw)}
-    permalink: /keywords/#{slug}/
+    title: "Publications tagged with #{kw}"
+    keyword: #{kw}
     ---
-
-    {% bibliography --group_by year --group_order descending --template bibliography_item --query "@*[keywords~=#{kw}]" %}
-
-    <p><a href="{{ '/publications/' | relative_url }}">← Back to all publications</a></p>
+      
+            <!-- Generated automatically from papers.bib -->
   MD
 end
 
