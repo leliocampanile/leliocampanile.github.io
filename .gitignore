@@ -2,6 +2,7 @@ _site/
 vendor/
 _keywords/
 _authors/
+_topics/
 .bundle/
 .sass-cache/
 .jekyll-cache/

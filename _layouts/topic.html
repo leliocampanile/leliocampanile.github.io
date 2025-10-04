@@ -1,0 +1,20 @@
+---
+layout: single
+---
+
+# {{ page.title }}
+
+{%- comment -%} Mostra il contenuto specifico della pagina (tag, testo ecc.) {%- endcomment -%}
+{{ content }}
+
+{% comment %} Costruisci la regex OR dalle keyword del topic {% endcomment %}
+{%- assign pattern = page.regex_query | default: page.keywords | join:"|" -%}
+
+{% bibliography
+   --group_by year
+   --group_order descending
+   --template bibliography_item
+   --query @*[keywords~= {{pattern}} ] %}
+
+
+<p><a href="{{ '/publications/' | relative_url }}">← Back to all publications</a></p>

@@ -35,11 +35,16 @@ jobs:
         run: |
           rm -f _keywords/*.md || true
           rm -f _authors/*.md || true
+          rm -f _topics/*.md || true
 
             
       - name: Generate keywords pages
         run: |
-          bundle exec ruby .github/scripts/generate_keywords.rb  
+          bundle exec ruby .github/scripts/generate_keywords_redirect.rb
+      
+      - name: Generate topics pages need _data/topic_keywords.json generate offline by generate_keyword_cluster.py
+        run: |
+          bundle exec ruby .github/scripts/generate_topics.rb   
 
       - name: Generate author pages
         run: |

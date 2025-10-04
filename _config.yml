@@ -191,6 +191,9 @@ collections:
   authors:
     output: true
     permalink: /:collection/:path/
+  topics:
+    output: true
+    permalink: /:collection/:path/
   
 
 
@@ -257,6 +260,10 @@ defaults:
       excerpt: ""
   - scope:
       path: "_authors"
+    values:
+      excerpt: ""
+  - scope:
+      path: "_topics"
     values:
       excerpt: ""
 
