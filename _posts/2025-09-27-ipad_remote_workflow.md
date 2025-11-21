@@ -3,6 +3,7 @@ title: "Using iPad as a Python Development Client with Mac, Tailscale, and VS Co
 date: 2025-09-27
 tags: [iPad, macOS, Tailscale, VSCode, Blink, RemoteDevelopment]
 permalink: /blog/ipad-remote-workflow/
+excerpt_separator: <!--more-->
 ---
 
 ## Introduction

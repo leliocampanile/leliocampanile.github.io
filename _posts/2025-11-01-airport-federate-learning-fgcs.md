@@ -6,6 +6,8 @@ date: 2025-11-01
 tags: [Federated Learning, Privacy, research, AI, ML, FL]
 ---
 
+![Headline Image](/images/fgcs-airport-head-line.jpg)
+
 ## 1. Why Talk About Biometrics and Privacy at Airports Today?
 
 Airports are rapidly evolving into hyper-automated environments.  
