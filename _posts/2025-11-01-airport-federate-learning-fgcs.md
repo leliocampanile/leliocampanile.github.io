@@ -1,14 +1,9 @@
 ---
 title: "Facial Recognition, Privacy, and Airports: Our Take on a Federated Approach"
 subtitle: "How Multi-Level Federated Learning Can Protect Biometric Data in Smart Airports"
+permalink: /blog/airport-federated-learning-fgcs/
 date: 2025-11-01
-tags: 
-	- federated learning
-	- privacy
-	- research
-	- ai
-	- ml
-	- fl
+tags: [Federated Learning, Privacy, research, AI, ML, FL]
 ---
 
 ## 1. Why Talk About Biometrics and Privacy at Airports Today?
