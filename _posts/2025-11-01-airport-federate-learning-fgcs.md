@@ -7,11 +7,10 @@ tags: [Federated Learning, Privacy, research, AI, ML, FL]
 excerpt_separator: <!--more-->
 ---
 
-![Headline Image](/images/fgcs-airport-head-line.jpg)
-
 The rapid adoption of facial recognition in airports raises new questions about privacy, data protection, and scalable AI. In our latest research, we propose a multi-level federated learning architecture that improves security and preserves passenger privacy without sacrificing performance.
 <!--more-->
 
+![Headline Image](/images/fgcs-airport-head-line.jpg)
 
 ## 1. Why Talk About Biometrics and Privacy at Airports Today?
 
@@ -44,6 +43,8 @@ We designed a **three-tiered system** tailored to the airport context:
 - **Global Level:** An airport-wide coordinator aggregates models across airlines without ever accessing raw data.
 
 This structure supports organizational autonomy, **compliance with data protection laws**, and **scalability** — all critical for real-world deployments.
+
+![Architectures Images](/images/two-level.jpeg "Figure adapted from Campanile et al., FGCS (2026), CC BY-NC-ND 4.0.")
 
 ---
 
