@@ -4,9 +4,14 @@ subtitle: "How Multi-Level Federated Learning Can Protect Biometric Data in Smar
 permalink: /blog/airport-federated-learning-fgcs/
 date: 2025-11-01
 tags: [Federated Learning, Privacy, research, AI, ML, FL]
+excerpt_separator: <!--more-->
 ---
 
 ![Headline Image](/images/fgcs-airport-head-line.jpg)
+
+The rapid adoption of facial recognition in airports raises new questions about privacy, data protection, and scalable AI. In our latest research, we propose a multi-level federated learning architecture that improves security and preserves passenger privacy without sacrificing performance.
+<!--more-->
+
 
 ## 1. Why Talk About Biometrics and Privacy at Airports Today?
 
