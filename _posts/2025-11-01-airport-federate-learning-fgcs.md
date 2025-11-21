@@ -44,7 +44,7 @@ We designed a **three-tiered system** tailored to the airport context:
 
 This structure supports organizational autonomy, **compliance with data protection laws**, and **scalability** — all critical for real-world deployments.
 
-![Architectures Images](/images/two-level.jpeg "Figure adapted from Campanile et al., FGCS (2026), CC BY-NC-ND 4.0.")
+![Architectures Images](/images/two-level.png "Figure adapted from Campanile et al., FGCS (2026), CC BY-NC-ND 4.0.")
 
 ---
 
