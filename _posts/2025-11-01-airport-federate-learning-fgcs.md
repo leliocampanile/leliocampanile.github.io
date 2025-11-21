@@ -2,7 +2,6 @@
 title: "Facial Recognition, Privacy, and Airports: Our Take on a Federated Approach"
 subtitle: "How Multi-Level Federated Learning Can Protect Biometric Data in Smart Airports"
 date: 2025-11-01
-authors: Lelio Campanile
 tags: 
 	- federated learning
 	- privacy
