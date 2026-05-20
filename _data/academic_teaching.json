@@ -1,4 +1,15 @@
 [
+  {
+    "period": "2025-2026",
+    "start_year": 2025,
+    "end_year": 2026,
+    "title": "Data bases and Information Systems",
+    "org": "Department of Mathematics and Physics, Università degli Studi della Campania 'L. Vanvitelli'",
+    "role": "Lecturer",
+    "summary": "6 CFU course for the Bachelor's Degree in Data Analytics, Academic Year 2025/2026.",
+    "link": "teaching/dbis/",
+    "tags": ["databases", "Bachelor", "Teaching"]
+  },
     {
     "period": "2025-2026",
     "start_year": 2025,
